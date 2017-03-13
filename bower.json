@@ -1,0 +1,21 @@
+{
+  "name": "goservice",
+  "description": "",
+  "main": "",
+  "authors": [
+    "randriana <rina.andriana@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/randriana/goservice-website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
