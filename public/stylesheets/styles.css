@@ -5843,6 +5843,7 @@ button.close {
 
 .widget-container {
   width: 850px;
+  height: 1000px;
   position: relative;
   margin: 0 auto; }
   .widget-container .button-container {
@@ -5862,7 +5863,7 @@ button.close {
       color: #999999; }
       .widget-container .button-container .widget-button:not(:last-child) {
         border-right: 2px solid #cccccc; }
-      .widget-container .button-container .widget-button:hover {
+      .widget-container .button-container .widget-button:hover, .widget-container .button-container .widget-button:focus {
         cursor: pointer;
         text-decoration: none;
         background-color: #e6e6e6; }
@@ -5893,7 +5894,6 @@ button.close {
     width: 340px;
     border-top: 2px solid #cccccc;
     border-bottom: 0px solid #cccccc;
-    z-index: -1;
     overflow: hidden;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -5938,6 +5938,24 @@ button.close {
         line-height: 33px;
         margin-right: 150px;
         text-align: justify; }
+    .widget-container .widget-content-container .carousel-container {
+      position: relative; }
+      .widget-container .widget-content-container .carousel-container .carousel-slide {
+        display: none; }
+        .widget-container .widget-content-container .carousel-container .carousel-slide.active {
+          display: block; }
+      .widget-container .widget-content-container .carousel-container .button {
+        position: absolute;
+        top: 170px;
+        font-size: 30px;
+        font-weight: 100;
+        color: #4D4D4D; }
+        .widget-container .widget-content-container .carousel-container .button.next {
+          right: 0; }
+        .widget-container .widget-content-container .carousel-container .button.prev {
+          left: 0; }
+        .widget-container .widget-content-container .carousel-container .button:hover {
+          cursor: pointer; }
   .widget-container .widget-bottom-line {
     top: 500px;
     left: 425px;

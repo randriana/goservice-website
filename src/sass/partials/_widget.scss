@@ -34,6 +34,7 @@
     $widget-width: 850px;
 
     width: $widget-width;
+    height: 1000px;
     position: relative;
     margin: 0 auto;
 
@@ -58,7 +59,7 @@
                 border-right: 2px solid #cccccc;
             }
 
-            &:hover {
+            &:hover, &:focus {
                 cursor: pointer;
                 text-decoration: none;
                 background-color: darken(#fff, 10%);
@@ -103,7 +104,6 @@
         width: $container-width-before;
         border-top: 2px solid #cccccc;
         border-bottom: 0px solid #cccccc;
-        z-index: -1;
         overflow: hidden;
 
         @include rotate(90deg);
@@ -146,6 +146,38 @@
                     line-height: 33px;
                     margin-right: 150px;
                     text-align: justify;
+                }
+            }
+        }
+
+        .carousel-container {
+            position: relative;
+
+            .carousel-slide {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            .button {
+                position: absolute;
+                top: $container-height-after/2;
+                font-size: 30px;
+                font-weight: 100;
+                color: #4D4D4D;
+
+                &.next {
+                    right: 0;
+                }
+
+                &.prev {
+                    left: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }

@@ -1,7 +1,4 @@
 (function(){
-
-
-
     /* move line when clicking button */
     $('.widget-button').click(function(e) {
 
@@ -24,7 +21,7 @@
                 '-o-transform': 'translateX(' + newPos + 'px)',
                 'transform': 'translateX(' + newPos + 'px)'
             });
-            
+
             $('.widget-first-line').removeClass('short');
         })
 
@@ -44,4 +41,37 @@
             })
         }
     });
+
+
+    /* carousel */
+    var current = 0;
+    var slides = $('.carousel-slide');
+
+    $('.next').click(function() {
+        nextSlide();
+    })
+
+    $('.prev').click(function() {
+        prevSlide();
+    })
+
+    function nextSlide(){
+        $(slides[current]).removeClass('active');
+
+        current++;
+        current = current % slides.length;
+
+        $(slides[current]).addClass('active');
+    }
+
+    function prevSlide(){
+        $(slides[current]).removeClass('active');
+
+        if(current === 0) {
+            current = 4;
+        }
+
+        current--;
+        $(slides[current]).addClass('active');
+    }
 })();
