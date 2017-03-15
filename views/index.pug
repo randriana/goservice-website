@@ -1,5 +1,48 @@
 extends ./layouts/layout
 
 block content
-  h1= title
-  p Welcome to f
+  header
+    .video-container
+      video.video(loop muted)
+        source(src="videos/video.mp4")
+        |no suppor
+      .video-overlay
+  .post-header
+    p Go’ Service AS tar seg av ditt hus rengjøring. 
+      |Våre renholdstjenester i Bergen og omegn er helt fleksible. 
+      |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
+      |Prøv vår nye priskalkulator.
+    a(href="calculator") Priskalkulator
+  .floating-image-container
+    img(src="images/pexels1.jpg")
+    .content
+      h2 GO' SERVICE AS
+      p Et bredt utvalg av renholdstjenester og tjenestelevering i Bergen og omegn både for private kunder og bedrifter
+      a Våre tjenester
+  #services
+    //.container
+      .widget-container
+        .button-container
+          .widget-button Daglig vask
+          .widget-button Periodiske vask
+          .widget-button Gulvbehandling
+          .widget-button Flyttevask
+          .widget-button Tillegstjenester
+        .widget-first-line
+        .widget-middle-line.upper
+        .widget-middle-line.lower
+        .widget-bottom-line
+
+    .container
+      .widget-container
+        .button-container
+          .widget-button Daglig vask
+          .widget-button Periodiske vask
+          .widget-button Gulvbehandling
+          .widget-button Flyttevask
+          .widget-button Tillegstjenester
+        .widget-first-line
+        .widget-content-container
+        .widget-bottom-line
+        .widget-bottom-circle
+      

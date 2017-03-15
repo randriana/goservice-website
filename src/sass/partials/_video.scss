@@ -1,0 +1,25 @@
+.video-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+    .video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #333333;
+        opacity: 0.6;
+    }
+}
+

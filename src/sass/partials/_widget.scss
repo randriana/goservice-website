@@ -1,0 +1,174 @@
+@mixin line-transform {
+    -webkit-transition: transform 2s ease-in-out, height 2s ease-in-out;
+    -moz-transition: transform 2s ease-in-out, height 2s ease-in-out;
+    -o-transition: transform 2s ease-in-out, height 2s ease-in-out;
+    transition: transform 2s ease-in-out, height 2s ease-in-out;
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin translateX($xValue) {
+    -webkit-transform: translateX($xValue);
+    -moz-transform: translateX($xValue);
+    -ms-transform: translateX($xValue);
+    -o-transform: translateX($xValue);
+    transform: translateX($xValue);
+}
+
+@mixin animation($name, $duration) {
+    -webkit-animation: $name $duration;
+    -moz-animation: $name $duration;
+    -o-animation: $name $duration;
+    animation: $name $duration;
+}
+
+.widget-container {
+    $widget-width: 850px;
+
+    width: $widget-width;
+    position: relative;
+    margin: 0 auto;
+
+    .button-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        border: 2px solid #cccccc;
+        border-radius: 10px;
+        background-color: #fff;
+        overflow: hidden;
+
+        .widget-button {
+            width: $widget-width/5;
+            padding: 25px 0;
+            text-align: center;
+            font-size: 20px;
+            color: #999999;
+
+            &:not(:last-child) {
+                border-right: 2px solid #cccccc;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken(#fff, 10%);
+            }
+        }
+    }
+
+    $first-line-top: -40px;
+    $first-line-height: 200px;
+    $bottom-line-height: 60px;
+
+    $container-height-after: 340px;
+
+    .widget-line {
+        position: absolute;
+        border-right: 2px solid #cccccc;
+        z-index: -1;
+    }
+
+    .widget-first-line {
+        top: $first-line-top;
+        left: 0;
+        height: $first-line-height;
+
+        @extend .widget-line;
+        @include translateX($widget-width/2);
+        @include line-transform;
+    }
+
+    .widget-content-container {
+        $container-width-before: $container-height-after;
+        height: 0px;
+
+        position: absolute;
+        top: 330px - 1px;
+        left: $widget-width/2 - $container-width-before/2 + 1px;
+        width: $container-width-before;
+        border-top: 2px solid #cccccc;
+        border-bottom: 0px solid #cccccc;
+        z-index: -1;
+
+        @include rotate(90deg);
+
+        &.middle-out {
+            top: $first-line-top + $first-line-height;
+            left: 85px;
+            height: $container-height-after;
+            width: 680px + 2px;
+            border-bottom: 2px solid #cccccc;
+
+            @include rotate(0deg);
+            @include animation(middle-out, 2s);
+        }
+    }
+
+    .widget-bottom-line {
+        top: $first-line-height + $container-height-after + $first-line-top;
+        left: $widget-width/2;
+        height: $bottom-line-height;
+
+        @extend .widget-line;
+    }
+
+    .widget-bottom-circle {
+        $diameter: 40px;
+        position: absolute;
+        top: $first-line-top + $first-line-height + $container-height-after + $bottom-line-height;
+        left: $widget-width/2 - $diameter/2 + 1px;
+        width: $diameter;
+        height: $diameter;
+        border: 2px solid #cccccc;
+        border-radius: 100%;
+    }
+
+    @mixin keyframes($name) {
+        @-webkit-keyframes #{$name} {
+            @content;
+        }
+        @-moz-keyframes #{$name} {
+            @content;
+        }
+        @-o-keyframes #{$name} {
+            @content;
+        }
+        @keyframes #{$name} {
+            @content;
+        }
+    }
+
+    @include keyframes(middle-out) {
+        0% {
+            top: 329px;
+            height: 0px;
+            width: $container-height-after;
+            left: 254px;
+            border-bottom: 0px solid #cccccc;
+            @include rotate(90deg);
+        }
+
+        50% {
+            @include rotate(0);
+            top: 329px;
+            left: 254px;
+            height: 0px;
+            width: $container-height-after;
+            border-bottom: 0px solid #cccccc;
+        }
+
+        100% {
+            top: 160px;
+            left: 85px;
+            height: $container-height-after;
+            border-bottom: 2px solid #cccccc;
+        }
+    }
+}

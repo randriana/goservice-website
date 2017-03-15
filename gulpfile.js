@@ -20,7 +20,7 @@ var bs = require('browser-sync').create();
         });
 
         gulp.watch('./src/sass/**/*.*', ['sass']);
-        gulp.watch('./views/**/*.pug').on('change', bs.reload);
+        gulp.watch(['./views/**/*.pug', './public/javascripts/*.js']).on('change', bs.reload);
     })
 
     gulp.task('default', ['serve'],function() {
