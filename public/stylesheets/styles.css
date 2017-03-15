@@ -5891,6 +5891,7 @@ button.close {
     border-top: 2px solid #cccccc;
     border-bottom: 0px solid #cccccc;
     z-index: -1;
+    overflow: hidden;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -5911,6 +5912,23 @@ button.close {
       -moz-animation: middle-out 2s;
       -o-animation: middle-out 2s;
       animation: middle-out 2s; }
+    .widget-container .widget-content-container .widget-content h3 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 100;
+      color: #44a2cb; }
+    .widget-container .widget-content-container .widget-content .text-container {
+      height: 340px;
+      width: 682px; }
+      .widget-container .widget-content-container .widget-content .text-container p {
+        padding: 10px 30px;
+        margin: 0;
+        font-size: 17px;
+        color: #4D4D4D;
+        font-weight: 100;
+        line-height: 33px;
+        margin-right: 150px;
+        text-align: justify; }
   .widget-container .widget-bottom-line {
     top: 500px;
     left: 425px;

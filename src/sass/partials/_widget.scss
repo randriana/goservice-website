@@ -68,6 +68,7 @@
     $bottom-line-height: 60px;
 
     $container-height-after: 340px;
+    $container-width-after: $container-height-after*2 + 2px;
 
     .widget-line {
         position: absolute;
@@ -96,6 +97,7 @@
         border-top: 2px solid #cccccc;
         border-bottom: 0px solid #cccccc;
         z-index: -1;
+        overflow: hidden;
 
         @include rotate(90deg);
 
@@ -103,11 +105,35 @@
             top: $first-line-top + $first-line-height;
             left: 85px;
             height: $container-height-after;
-            width: 680px + 2px;
+            width: $container-width-after;
             border-bottom: 2px solid #cccccc;
 
             @include rotate(0deg);
             @include animation(middle-out, 2s);
+        }
+
+        .widget-content {
+            h3 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 100;
+                color: #44a2cb;
+            }
+
+            .text-container {
+                height: $container-height-after;
+                width: $container-width-after;
+                p {
+                    padding: 10px 30px;
+                    margin: 0;
+                    font-size: 17px;
+                    color: #4D4D4D;
+                    font-weight: 100;
+                    line-height: 33px;
+                    margin-right: 150px;
+                    text-align: justify;
+                }
+            }
         }
     }
 
