@@ -5863,7 +5863,7 @@ button.close {
       color: #999999; }
       .widget-container .button-container .widget-button:not(:last-child) {
         border-right: 2px solid #cccccc; }
-      .widget-container .button-container .widget-button:hover, .widget-container .button-container .widget-button:focus {
+      .widget-container .button-container .widget-button:hover, .widget-container .button-container .widget-button:focus, .widget-container .button-container .widget-button.active {
         cursor: pointer;
         text-decoration: none;
         background-color: #e6e6e6; }
@@ -5925,7 +5925,8 @@ button.close {
       text-align: center;
       font-size: 30px;
       font-weight: 100;
-      color: #44a2cb; }
+      color: #44a2cb;
+      padding-top: 15px; }
     .widget-container .widget-content-container .widget-content .text-container {
       height: 340px;
       width: 682px; }
@@ -5946,16 +5947,17 @@ button.close {
           display: block; }
       .widget-container .widget-content-container .carousel-container .button {
         position: absolute;
-        top: 170px;
-        font-size: 30px;
+        top: 20px;
+        font-size: 20px;
         font-weight: 100;
-        color: #4D4D4D; }
+        color: #CCCCCC; }
         .widget-container .widget-content-container .carousel-container .button.next {
           right: 0; }
         .widget-container .widget-content-container .carousel-container .button.prev {
           left: 0; }
         .widget-container .widget-content-container .carousel-container .button:hover {
-          cursor: pointer; }
+          cursor: pointer;
+          text-decoration: none; }
   .widget-container .widget-bottom-line {
     top: 500px;
     left: 425px;
@@ -5991,7 +5993,7 @@ button.close {
     left: 254px;
     height: 0px;
     width: 340px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     left: 85px;
@@ -6020,7 +6022,7 @@ button.close {
     left: 254px;
     height: 0px;
     width: 340px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     left: 85px;
@@ -6049,7 +6051,7 @@ button.close {
     left: 254px;
     height: 0px;
     width: 340px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     left: 85px;
@@ -6078,7 +6080,7 @@ button.close {
     left: 254px;
     height: 0px;
     width: 340px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     left: 85px;
@@ -6091,7 +6093,7 @@ button.close {
   50% {
     top: 320px;
     height: 0px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     height: 340px;
@@ -6103,7 +6105,7 @@ button.close {
   50% {
     top: 320px;
     height: 0px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     height: 340px;
@@ -6115,7 +6117,7 @@ button.close {
   50% {
     top: 320px;
     height: 0px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     height: 340px;
@@ -6127,7 +6129,7 @@ button.close {
   50% {
     top: 320px;
     height: 0px;
-    border-bottom: 0px solid #cccccc; }
+    border-bottom: 2px solid #cccccc; }
   100% {
     top: 160px;
     height: 340px;

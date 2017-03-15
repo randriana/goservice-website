@@ -1,6 +1,15 @@
-(function(){
-    /* move line when clicking button */
+(function widget(){
+
+
+    var activeButton = 0;
+
     $('.widget-button').click(function(e) {
+
+        $('.widget-button')[activeButton].classList.remove("active");
+
+        activeButton = $('.widget-button').index(this);
+
+        $(this).addClass('active');
 
         e.preventDefault();
 
