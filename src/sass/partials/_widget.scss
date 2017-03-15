@@ -1,8 +1,8 @@
-@mixin line-transform {
-    -webkit-transition: transform 2s ease-in-out, height 2s ease-in-out;
-    -moz-transition: transform 2s ease-in-out, height 2s ease-in-out;
-    -o-transition: transform 2s ease-in-out, height 2s ease-in-out;
-    transition: transform 2s ease-in-out, height 2s ease-in-out;
+@mixin line-transform($duration) {
+    -webkit-transition: height $duration ease;
+    -moz-transition: height $duration ease;
+    -o-transition: height $duration ease;
+    transition: height $duration ease;
 }
 
 @mixin rotate($deg) {
@@ -29,6 +29,8 @@
 }
 
 .widget-container {
+    $animation-duration: 2s;
+
     $widget-width: 850px;
 
     width: $widget-width;
@@ -58,13 +60,14 @@
 
             &:hover {
                 cursor: pointer;
+                text-decoration: none;
                 background-color: darken(#fff, 10%);
             }
         }
     }
 
-    $first-line-top: -40px;
-    $first-line-height: 200px;
+    $first-line-top: 82px;
+    $first-line-height: 160px - $first-line-top;
     $bottom-line-height: 60px;
 
     $container-height-after: 340px;
@@ -73,7 +76,7 @@
     .widget-line {
         position: absolute;
         border-right: 2px solid #cccccc;
-        z-index: -1;
+        z-index: 1;
     }
 
     .widget-first-line {
@@ -83,7 +86,11 @@
 
         @extend .widget-line;
         @include translateX($widget-width/2);
-        @include line-transform;
+        @include line-transform($animation-duration/2);
+
+        &.short {
+            height: 0;
+        }
     }
 
     .widget-content-container {
@@ -109,7 +116,14 @@
             border-bottom: 2px solid #cccccc;
 
             @include rotate(0deg);
-            @include animation(middle-out, 2s);
+        }
+
+        &.middle-out-anim {
+            @include animation(middle-out, $animation-duration);
+        }
+
+        &.short-anim {
+            @include animation(short-anim, $animation-duration);
         }
 
         .widget-content {
@@ -193,6 +207,24 @@
         100% {
             top: 160px;
             left: 85px;
+            height: $container-height-after;
+            border-bottom: 2px solid #cccccc;
+        }
+    }
+
+    @include keyframes(short-anim) {
+        0% {
+            top: 160px;
+        }
+
+        50% {
+            top: 320px;
+            height: 0px;
+            border-bottom: 0px solid #cccccc;
+        }
+
+        100% {
+            top: 160px;
             height: $container-height-after;
             border-bottom: 2px solid #cccccc;
         }

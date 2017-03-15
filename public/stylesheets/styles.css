@@ -5864,24 +5864,27 @@ button.close {
         border-right: 2px solid #cccccc; }
       .widget-container .button-container .widget-button:hover {
         cursor: pointer;
+        text-decoration: none;
         background-color: #e6e6e6; }
   .widget-container .widget-line, .widget-container .widget-first-line, .widget-container .widget-bottom-line {
     position: absolute;
     border-right: 2px solid #cccccc;
-    z-index: -1; }
+    z-index: 1; }
   .widget-container .widget-first-line {
-    top: -40px;
+    top: 82px;
     left: 0;
-    height: 200px;
+    height: 78px;
     -webkit-transform: translateX(425px);
     -moz-transform: translateX(425px);
     -ms-transform: translateX(425px);
     -o-transform: translateX(425px);
     transform: translateX(425px);
-    -webkit-transition: transform 2s ease-in-out, height 2s ease-in-out;
-    -moz-transition: transform 2s ease-in-out, height 2s ease-in-out;
-    -o-transition: transform 2s ease-in-out, height 2s ease-in-out;
-    transition: transform 2s ease-in-out, height 2s ease-in-out; }
+    -webkit-transition: height 1s ease;
+    -moz-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease; }
+    .widget-container .widget-first-line.short {
+      height: 0; }
   .widget-container .widget-content-container {
     height: 0px;
     position: absolute;
@@ -5907,11 +5910,17 @@ button.close {
       -moz-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
       -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+      transform: rotate(0deg); }
+    .widget-container .widget-content-container.middle-out-anim {
       -webkit-animation: middle-out 2s;
       -moz-animation: middle-out 2s;
       -o-animation: middle-out 2s;
       animation: middle-out 2s; }
+    .widget-container .widget-content-container.short-anim {
+      -webkit-animation: short-anim 2s;
+      -moz-animation: short-anim 2s;
+      -o-animation: short-anim 2s;
+      animation: short-anim 2s; }
     .widget-container .widget-content-container .widget-content h3 {
       text-align: center;
       font-size: 30px;
@@ -6055,6 +6064,54 @@ button.close {
   100% {
     top: 160px;
     left: 85px;
+    height: 340px;
+    border-bottom: 2px solid #cccccc; } }
+
+@-webkit-keyframes short-anim {
+  0% {
+    top: 160px; }
+  50% {
+    top: 320px;
+    height: 0px;
+    border-bottom: 0px solid #cccccc; }
+  100% {
+    top: 160px;
+    height: 340px;
+    border-bottom: 2px solid #cccccc; } }
+
+@-moz-keyframes short-anim {
+  0% {
+    top: 160px; }
+  50% {
+    top: 320px;
+    height: 0px;
+    border-bottom: 0px solid #cccccc; }
+  100% {
+    top: 160px;
+    height: 340px;
+    border-bottom: 2px solid #cccccc; } }
+
+@-o-keyframes short-anim {
+  0% {
+    top: 160px; }
+  50% {
+    top: 320px;
+    height: 0px;
+    border-bottom: 0px solid #cccccc; }
+  100% {
+    top: 160px;
+    height: 340px;
+    border-bottom: 2px solid #cccccc; } }
+
+@keyframes short-anim {
+  0% {
+    top: 160px; }
+  50% {
+    top: 320px;
+    height: 0px;
+    border-bottom: 0px solid #cccccc; }
+  100% {
+    top: 160px;
     height: 340px;
     border-bottom: 2px solid #cccccc; } }
 
