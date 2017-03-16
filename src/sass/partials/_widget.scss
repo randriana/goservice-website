@@ -1,33 +1,3 @@
-@mixin line-transform($duration) {
-    -webkit-transition: height $duration ease;
-    -moz-transition: height $duration ease;
-    -o-transition: height $duration ease;
-    transition: height $duration ease;
-}
-
-@mixin rotate($deg) {
-    -webkit-transform: rotate($deg);
-    -moz-transform: rotate($deg);
-    -ms-transform: rotate($deg);
-    -o-transform: rotate($deg);
-    transform: rotate($deg);
-}
-
-@mixin translateX($xValue) {
-    -webkit-transform: translateX($xValue);
-    -moz-transform: translateX($xValue);
-    -ms-transform: translateX($xValue);
-    -o-transform: translateX($xValue);
-    transform: translateX($xValue);
-}
-
-@mixin animation($name, $duration) {
-    -webkit-animation: $name $duration;
-    -moz-animation: $name $duration;
-    -o-animation: $name $duration;
-    animation: $name $duration;
-}
-
 .widget-container {
     $animation-duration: 2s;
 
@@ -87,7 +57,7 @@
 
         @extend .widget-line;
         @include translateX($widget-width/2);
-        @include line-transform($animation-duration/2);
+        @include transition(height, $animation-duration/2);
 
         &.short {
             height: 0;
@@ -127,6 +97,7 @@
         }
 
         .widget-content {
+            position: relative;
             h3 {
                 text-align: center;
                 font-size: 30px;
@@ -147,6 +118,23 @@
                     line-height: 33px;
                     margin-right: 150px;
                     text-align: justify;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                top: 50px;
+                right: -50px;
+
+                svg {
+                    height: 200px;
+                }
+
+                &.wide {
+                    right: 10px;
+                    svg {
+                    width: 150px;
+                    }
                 }
             }
         }
@@ -202,21 +190,6 @@
         height: $diameter;
         border: 2px solid #cccccc;
         border-radius: 100%;
-    }
-
-    @mixin keyframes($name) {
-        @-webkit-keyframes #{$name} {
-            @content;
-        }
-        @-moz-keyframes #{$name} {
-            @content;
-        }
-        @-o-keyframes #{$name} {
-            @content;
-        }
-        @keyframes #{$name} {
-            @content;
-        }
     }
 
     @include keyframes(middle-out) {
