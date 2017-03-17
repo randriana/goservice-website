@@ -34,8 +34,6 @@
             $('.widget-first-line').removeClass('short');
         })
 
-        
-
         if($('.widget-container').hasClass("active") === false){
             /* add middle-out-anim for in the beginning */
             $('.widget-content-container').addClass('middle-out middle-out-anim').on('animationend animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(){

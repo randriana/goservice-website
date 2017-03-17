@@ -1,0 +1,15 @@
+.container-fluid
+      .row
+        .col-sm-3
+          h3 Oppsummering
+          span Total pris:
+          span "subcategory"
+          br
+          span Antall kvadratmeter:
+          span ekstra greier:
+        .col-md-8
+            .firstQuestion.question
+                h3 Hva kan vi hjelpe deg med?
+                each bText in ['Daglig vask', 'Periodisk vask', 'Gulvbehandling', 'Flyttevask', 'Tilleggstjenester']
+                    .button= bText
+                span {{test}}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="250.66783"
+   height="282.47491"
+   viewBox="0 0 66.322529 74.738156"
+   version="1.1"
+   id="svg1966"
+   inkscape:version="0.92.0 r"
+   sodipodi:docname="skuremaskin2.svg">
+  <defs
+     id="defs1960">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient15238">
+      <stop
+         style="stop-color:#8ac5d8;stop-opacity:1"
+         offset="0"
+         id="stop15234" />
+      <stop
+         style="stop-color:#72b9d8;stop-opacity:1"
+         offset="1"
+         id="stop15236" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient15238"
+       id="radialGradient15242"
+       cx="11.12843"
+       cy="338.76978"
+       fx="11.12843"
+       fy="338.76978"
+       r="5.291667"
+       gradientTransform="matrix(0.01342993,-1.2284495,0.86942377,0.00950491,-283.55552,349.22052)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.92988813"
+     inkscape:cx="-298.43271"
+     inkscape:cy="229.40509"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1035"
+     inkscape:window-x="1440"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:snap-nodes="false" />
+  <metadata
+     id="metadata1963">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(17.44529,-267.8868)">
+    <rect
+       style="opacity:1;fill:#72b9d8;fill-opacity:1;stroke:#72b9d8;stroke-width:1.81210029;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6190"
+       width="38.33503"
+       height="5.8451219"
+       x="-16.539038"
+       y="335.87399"
+       ry="4.1757841"
+       rx="4.4046402" />
+    <path
+       style="fill:none;stroke:#e6e6e6;stroke-width:1.80066514;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 38.9351,268.94627 -22.946705,49.78797 -1.304186,-0.85191 0.346586,-9.78696 H -0.98253308 v 5.15872 l -7.49693842,4.66316 c -2.7700795,2.0107 -4.1065485,4.62137 -4.7577725,7.65361 h 4.73e-4 l 0.05761,8.43616 30.862243,0.1076 v -11.26755 l 23.36398,-50.80901 6.624432,-0.005 0.141736,-3.00058 z"
+       id="skuremaskin"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccc" />
+    <ellipse
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#e6e6e6;stroke-width:1.81210029;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="skuremaskin-wheel"
+       cx="22.570192"
+       cy="324.26294"
+       rx="8.1677895"
+       ry="8.1641655" />
+    <path
+       inkscape:connector-curvature="0"
+       id="line1"
+       d="m 11.128428,336.56329 v 4.413"
+       style="fill:#ffffff;stroke:url(#radialGradient15242);stroke-width:10.58333397;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
+  </g>
+</svg>

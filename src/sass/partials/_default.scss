@@ -1,5 +1,6 @@
 body {
     font-family: "open-sans", sans-serif;
+    height: 5000px;
 }
 
 .post-header {
@@ -68,5 +69,33 @@ body {
             padding: 15px;
         }
     }
+}
 
+#partner-section {
+    background-color: #3d4853;
+    padding-bottom: 40px;
+
+    h2 {
+        text-align: center;
+        padding: 50px 0;
+        color: #FFF;
+        font-weight: 100;
+    }
+
+    .container-fluid {
+        display: flex;
+        justify-content: space-around;
+
+        .partner-logo {
+           img {
+               width: auto;
+               max-height: 65px;
+               
+           }
+        }
+    }
+}
+
+.fancy-section {
+    background-color: #F0F0F0;
 }
