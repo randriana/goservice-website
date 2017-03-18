@@ -1,18 +1,23 @@
 .container-fluid
     .row
         .col-sm-3
+            span(v-on:click="restart") Begynne på nytt?
             h3 Oppsummering
             div Total pris: <b> {{totalPrice}} </b>
             div(v-if="serviceType") Type tjeneste: <b> {{serviceType}} </b>
             div(v-if="periodicService") Type periodisk vask: <b> {{periodicService}} </b>
             ul 
-                li(v-if="windowSide.inside") Innvendig
-                li(v-if="windowSide.outside") Utvendig
+                li(v-if="vindusvask.inside") Innvendig
+                li(v-if="vindusvask.outside") Utvendig
                 li(v-if="gulvbehandling.boning") Boning
                 li(v-if="gulvbehandling.skuring") skuring
-                li(v-if="byggEkstra.silicon") Skrape silicon
-                li(v-if="byggEkstra.paint") Skrape maling
+                li(v-if="byggvask.silicon") Skrape silicon
+                li(v-if="byggvask.maling") Skrape maling
+                li(v-if="winter.broyting") Brøyting
+                li(v-if="winter.salting") Salting
+            div(v-if="numberOfKgSalt") Mengde salt: {{numberOfKgSalt}}kg
             div(v-if="numberOfKvm") Antall kvadratmeter: {{numberOfKvm}} m&#178;
+            div(v-if="numberOfWinterHours") Antall timer: {{numberOfWinterHours}}
 
         .col-md-8
             .question(v-bind:class="[activeQuestion === 'servicesQuestion' ? 'active' : '' ]")
@@ -28,18 +33,28 @@
             .question(v-bind:class="[activeQuestion === 'extraQuestion' ? 'active' : '' ]")
                 h3 Hva kan vi hjelpe deg med?
                 each bText in ['Brøyting/salting']
-                    .button(v-on:click="setPeriodicService")= bText
+                    .button(v-on:click="setExtraService")= bText
 
             .question(v-bind:class="[activeQuestion === 'kvmQuestion' ? 'active' : '' ]")
                 h3 Hvor mange kvadratmeter gjelder det?
                 input(type="number" v-model="numberOfKvm")
                 .button(v-on:click="finish") Videre
 
+            .question(v-bind:class="[activeQuestion === 'kgSaltQuestion' ? 'active' : '' ]")
+                h3 Hvor mange kilo salt trengs det?
+                input(type="number" v-model="numberOfKgSalt")
+                .button(v-on:click="setWinterHours") Videre
+
+            .question(v-bind:class="[activeQuestion === 'winterHoursQuestion' ? 'active' : '' ]")
+                h3 Hvor mange timer arbeid trengs det?
+                input(type="number" v-model="numberOfWinterHours")
+                .button(v-on:click="finish") Videre
+
             .question(v-bind:class="[activeQuestion === 'windowQuestion' ? 'active' : '' ]")
                 h3 Angi hvilke sider du vil ha vasket?
-                input#checkboxInside(type="checkbox" v-model="windowSide.inside")
+                input#checkboxInside(type="checkbox" v-model="vindusvask.inside")
                 label(for="checkboxInside") Innvendig
-                input#checkboxOutside(type="checkbox" v-model="windowSide.outside")
+                input#checkboxOutside(type="checkbox" v-model="vindusvask.outside")
                 label(for="checkboxOutside") Utvendig
                 .button(v-on:click="setKvm") Videre
 
@@ -53,26 +68,34 @@
 
             .question(v-bind:class="[activeQuestion === 'byggQuestion' ? 'active' : '' ]")
                 h3 Ekstra jobb som må gjøres?
-                input#checkboxInside(type="checkbox" v-model="byggEkstra.silicon")
+                input#checkboxSilicon(type="checkbox" v-model="byggvask.silicon")
                 label(for="checkboxSilicon") Skrape silicon
-                input#checkboxOutside(type="checkbox" v-model="byggEkstra.paint")
-                label(for="checkboxPaint") Skrape maling
+                input#checkboxMaling(type="checkbox" v-model="byggvask.maling")
+                label(for="checkboxMaling") Skrape maling
                 .button(v-on:click="setKvm") Videre
 
             .question(v-bind:class="[activeQuestion === 'winterQuestion' ? 'active' : '' ]")
                 h3 Hva ønsker du å utføre?
-                input#checkboxInside(type="checkbox" v-model="winter.broyting")
+                input#checkboxBroyting(type="checkbox" v-model="winter.broyting")
                 label(for="checkboxBroyting") Brøyting
-                input#checkboxOutside(type="checkbox" v-model="winter.salting")
+                input#checkboxSalting(type="checkbox" v-model="winter.salting")
                 label(for="checkboxSalting") Salting
-                .button(v-on:click="setKvm") Videre
+                .button(v-on:click="setKgSalt") Videre
 
             .question(v-bind:class="[activeQuestion === 'finish' ? 'active' : '' ]")
                 div Total pris: <b> {{totalPrice}} </b>
                 ul
                     li Type tjeneste: <b> {{serviceType}} </b>
                     li(v-if="periodicService") Type periodisk vask: <b> {{periodicService}} </b>
-                    li(v-if="windowSide.inside") Innvendig
-                    li(v-if="windowSide.outside") Utvendig
+                    li(v-if="vindusvask.inside") Innvendig
+                    li(v-if="vindusvask.outside") Utvendig
+                    li(v-if="gulvbehandling.boning") Boning
+                    li(v-if="gulvbehandling.skuring") Skuring
+                    li(v-if="byggvask.silicon") Skrape silicon
+                    li(v-if="byggvask.maling") Skrape maling
+                    li(v-if="winter.broyting") Brøyting
+                    li(v-if="winter.salting") Salting
                     li(v-if="numberOfKvm") Antall kvadratmeter: {{numberOfKvm}} m&#178;
+                    li(v-if="numberOfKgSalt") Mengde salt: {{numberOfKgSalt}}kg
+                    li(v-if="numberOfWinterHours") Antall timer: {{numberOfWinterHours}}
 
