@@ -21,11 +21,25 @@
     transform: translateX($xValue);
 }
 
+@mixin translate($xValue, $yValue)  {
+    -webkit-transform: translate($xValue, $yValue);
+    -moz-transform: translate($xValue, $yValue);
+    -ms-transform: translate($xValue, $yValue);
+    -o-transform: translate($xValue, $yValue);
+    transform: translate($xValue, $yValue);
+}
+
 @mixin animation($name, $duration) {
     -webkit-animation: $name $duration;
     -moz-animation: $name $duration;
     -o-animation: $name $duration;
     animation: $name $duration;
+}
+
+@mixin box-shadow($hShadow, $vShadow, $blur, $shadowSize) {
+    -webkit-box-shadow: $hShadow $vShadow $blur $shadowSize;
+    -moz-box-shadow: $hShadow $vShadow $blur $shadowSize;
+    box-shadow: $hShadow $vShadow $blur $shadowSize;
 }
 
 @mixin keyframes($name) {

@@ -1,16 +1,19 @@
 new Vue({
     el: '#calculator-section',
     data: {
-        numberOfKvm: 0,
+        numberOfKvm: '',
         serviceType: '',
         periodicService: '',
         numberOfKgSalt: '',
         numberOfWinterHours: '',
         activeQuestion: 'servicesQuestion',
+        extra: '',
+        editKvmActive: false,
+        editKvmText: 'Endre',
 
         dagligVask: { active: false, pricePerKvm: 10 },
         flytteVask: { active: false, pricePerKvm: 43 },
-        vindusvask: { inside: false, outside: false, pricePerSide: 12 },
+        vindusvask: { inside: false, outside: false, pricePerSide: 12,  },
         byggvask: { active: false, silicon: false, maling: false, pricePerKvm: 19, priceSilicon: 10, priceMaling: 10 },
         nedvask: { active: false, pricePerKvm: 43 },
         tepperens: { active: false, pricePerKvm: 25 },
@@ -47,7 +50,7 @@ new Vue({
         },
         setPeriodicService: function(e) {
             var periodicType = e.target.textContent;
-            this.periodicService = periodicType;
+            this.serviceType = periodicType;
 
             if(periodicType == 'Vindusvask') {
                 this.vindusvask.active = true;
@@ -65,10 +68,10 @@ new Vue({
         },
         setExtraService: function(e) {
             var extraType = e.target.textContent;
-
             this.activeQuestion = 'winterQuestion';
         },
         finish: function() {
+            this.addExtraToArray();
             this.activeQuestion = 'finish';
         },
         restart: function() {
@@ -89,11 +92,31 @@ new Vue({
             this.gulvbehandling.skuring = false;
             this.winter.broyting = false;
             this.winter.salting = false;
-            this.numberOfKvm = 0;
+            this.numberOfKvm = '';
             this.serviceType = '';
             this.periodicService = '';
-            this.numberOfKgSalt = 0;
-            this.numberOfWinterHours = 0;
+            this.numberOfKgSalt = '';
+            this.numberOfWinterHours = '';
+            this.extra = '';
+        },
+        addExtraToArray: function() {
+            var self = this;
+            new Map([ ['Innvendig',this.vindusvask.inside], ['Utvendig',this.vindusvask.outside], ['Silikon',this.byggvask.silicon], ['Maling',this.byggvask.maling], 
+            ['Boning',this.gulvbehandling.boning], ['Skuring',this.gulvbehandling.skuring], ['Brøyting',this.winter.broyting], ['Salting',this.winter.salting] ])
+            .forEach(function(value, key) {
+                if(value) {
+                    self.extra += key + ', ';
+                }
+            })
+            self.extra = self.extra.slice(0, -2);
+        },
+        editKvm: function() {
+            this.editKvmActive = this.editKvmActive ? false : true;
+            if(this.editKvmActive) {
+                this.editKvmText = 'Ferdig'
+            } else {
+                this.editKvmText = 'Endre'
+            }
         }
     },
 
