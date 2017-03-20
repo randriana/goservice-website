@@ -7,123 +7,136 @@
                     span Hallo
             transition(name="fade")
                 .calculator-widget-content(v-show="widgetContentActive")
-                    .question(v-show="activeQuestion === 'servicesQuestion'")
-                        h3 Hva kan vi hjelpe deg med?
-                        .button(v-for="bText in ['Daglig vask', 'Periodisk vask', 'Gulvbehandling', 'Flyttevask', 'Tilleggstjenester']" 
-                            v-on:click="setServiceType") {{bText}}
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'servicesQuestion'" key="servicesQuestion")
+                            h3 Hva kan vi hjelpe deg med?
+                            .button(v-for="bText in ['Daglig vask', 'Periodisk vask', 'Gulvbehandling', 'Flyttevask', 'Tilleggstjenester']" 
+                                v-on:click="setServiceType") {{bText}}
+                                
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'periodicQuestion'" key="periodicQuestion")
+                            h3 Hvilken type periodisk vask trenger du?
+                            each bText in ['Vindusvask', 'Byggvask', 'Nedvask', 'Tepperens']
+                                .button(v-on:click="setPeriodicService")= bText
 
-                    .question(v-show="activeQuestion === 'periodicQuestion'")
-                        h3 Hvilken type periodisk vask trenger du?
-                        each bText in ['Vindusvask', 'Byggvask', 'Nedvask', 'Tepperens']
-                            .button(v-on:click="setPeriodicService")= bText
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'extraQuestion'" key="extraQuestion")
+                            h3 Hva kan vi hjelpe deg med?
+                            each bText in ['Brøyting/salting']
+                                .button(v-on:click="setExtraService")= bText
 
-                    .question(v-show="activeQuestion === 'extraQuestion'")
-                        h3 Hva kan vi hjelpe deg med?
-                        each bText in ['Brøyting/salting']
-                            .button(v-on:click="setExtraService")= bText
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'kvmQuestion'" key="kvmQuestion")
+                            h3 Hvor mange kvadratmeter gjelder det?
+                            .textInput-container
+                                input(type="number" v-model="numberOfKvm" autofocus required).textInput
+                                span.enhet m&#178;
+                            .button(v-on:click="finish") Videre
+                            
+                    //- må se om han trenger salting
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'kgSaltQuestion'" key="kgSaltQuestion")
+                            h3 Hvor mange kilo salt trengs det?
+                            .textInput-container
+                                input(type="number" v-model="numberOfKgSalt" autofocus).textInput
+                                span.enhet kg
+                            .button(v-on:click="next('winterHoursQuestion')") Videre
 
-                    .question(v-show="activeQuestion === 'kvmQuestion'")
-                        h3 Hvor mange kvadratmeter gjelder det?
-                        .textInput-container
-                            input(type="number" v-model="numberOfKvm" autofocus required).textInput
-                            span.enhet m&#178;
-                        .button(v-on:click="finish") Videre
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'winterHoursQuestion'" key="winterHoursQuestion")
+                            h3 Hvor mange timer arbeid trengs det?
+                            .textInput-container
+                                input(type="number" v-model="numberOfWinterHours" autofocus).textInput
+                                span.enhet timer
+                            .button(v-on:click="finish") Videre
+                    
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'windowQuestion'" key="windowQuestion")
+                            h3 Angi hvilke sider du vil ha vasket?
+                            .checkboxInput-container
+                                input#checkboxInside(type="checkbox" v-model="vindusvask.inside")
+                                label(for="checkboxInside").customCheckbox
+                                span Innvendig
+                            .checkboxInput-container
+                                input#checkboxOutside(type="checkbox" v-model="vindusvask.outside")
+                                label(for="checkboxOutside").customCheckbox
+                                span Utvendig
+                            .button.small(v-on:click="next('kvmQuestion')") Videre
 
-                    .question(v-show="activeQuestion === 'kgSaltQuestion'")
-                        h3 Hvor mange kilo salt trengs det?
-                        .textInput-container
-                            input(type="number" v-model="numberOfKgSalt" autofocus).textInput
-                            span.enhet kg
-                        .button(v-on:click="setWinterHours") Videre
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'floorQuestion'" key="floorQuestion")
+                            h3 Angi type gulvbehandling?
+                            .checkboxInput-container
+                                input#checkboxBoning(type="checkbox" v-model="gulvbehandling.boning")
+                                label(for="checkboxBoning").customCheckbox
+                                span Boning
+                            .checkboxInput-container
+                                input#checkboxSkuring(type="checkbox" v-model="gulvbehandling.skuring")
+                                label(for="checkboxSkuring").customCheckbox 
+                                span Skuring
+                            .button.small(v-on:click="next('kvmQuestion')") Videre
 
-                    .question(v-show="activeQuestion === 'winterHoursQuestion'")
-                        h3 Hvor mange timer arbeid trengs det?
-                        .textInput-container
-                            input(type="number" v-model="numberOfWinterHours" autofocus).textInput
-                            span.enhet timer
-                        .button(v-on:click="finish") Videre
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'byggQuestion'" key="byggQuestion")
+                            h3 Ekstra jobb som må gjøres?
+                            .checkboxInput-container
+                                input#checkboxSilicon(type="checkbox" v-model="byggvask.silicon")
+                                label(for="checkboxSilicon").customCheckbox 
+                                span Skrape silicon
+                            .checkboxInput-container
+                                input#checkboxMaling(type="checkbox" v-model="byggvask.maling")
+                                label(for="checkboxMaling").customCheckbox
+                                span Skrape maling
+                            .button.small(v-on:click="next('kvmQuestion')") Videre
 
-                    .question(v-show="activeQuestion === 'windowQuestion'")
-                        h3 Angi hvilke sider du vil ha vasket?
-                        .checkboxInput-container
-                            input#checkboxInside(type="checkbox" v-model="vindusvask.inside")
-                            label(for="checkboxInside").customCheckbox
-                            span Innvendig
-                        .checkboxInput-container
-                            input#checkboxOutside(type="checkbox" v-model="vindusvask.outside")
-                            label(for="checkboxOutside").customCheckbox
-                            span Utvendig
-                        .button.small(v-on:click="setKvm") Videre
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question(v-show="activeQuestion === 'winterQuestion'" key="winterQuestion")
+                            h3 Hva ønsker du å utføre?
+                            .checkboxInput-container
+                                input#checkboxBroyting(type="checkbox" v-model="winter.broyting").customCheckbox
+                                label(for="checkboxBroyting") 
+                                span Brøyting
+                            .checkboxInput-container
+                                input#checkboxSalting(type="checkbox" v-model="winter.salting").customCheckbox
+                                label(for="checkboxSalting") 
+                                span Salting
+                            .button.small(v-on:click="next('kgSaltQuestion')") Videre
+                    
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question.summary(v-show="activeQuestion === 'finish'" key="finish")
+                            .summary-header
+                                h3 Oppsummering
+                            .firstCol
+                                span.main Type tjeneste:
+                                span.sous(v-if="extra") - Tillegg:
+                                br
+                                span.main(v-if="serviceType != 'Tilleggstjenester'") Antall kvadratmeter:
+                                span.main(v-if="numberOfWinterHours") Antall timer:
+                                span.main(v-if="numberOfKgSalt") Mengde salt:
+                                br
+                                span.main Total pris:
+                            .secondCol
+                                span.value {{serviceType}}
+                                span.value {{extra}}
+                                br
+                                .kvm-container(v-if="serviceType != 'Tilleggstjenester'")
+                                    input.edit-Input(v-if="editKvmActive" type="number" v-model="numberOfKvm" required autofocus)
+                                    span.value(v-else) {{numberOfKvm}} m&#178;
+                                    span.edit(v-on:click="editKvm") {{editKvmText}}
+                                span.value(v-if="numberOfWinterHours") {{numberOfWinterHours}} timer
+                                span.value(v-if="numberOfKgSalt") {{numberOfKgSalt}} kg
+                                br
+                                span.value.price {{totalPrice}},- <div class="mva"> ekskl. mva</div>
+                            p.nb NB! Denne prisen er bare en prisantydning. Send en en forespørsel til oss for å få en nøyaktig pris.
+                            .send.button.small(v-on:click="next('contact')") Send til oss
 
-                    .question(v-show="activeQuestion === 'floorQuestion'")
-                        h3 Angi type gulvbehandling?
-                        .checkboxInput-container
-                            input#checkboxBoning(type="checkbox" v-model="gulvbehandling.boning")
-                            label(for="checkboxBoning").customCheckbox
-                            span Boning
-                        .checkboxInput-container
-                            input#checkboxSkuring(type="checkbox" v-model="gulvbehandling.skuring")
-                            label(for="checkboxSkuring").customCheckbox 
-                            span Skuring
-                        .button.small(v-on:click="setKvm") Videre
-
-                    .question(v-show="activeQuestion === 'byggQuestion'")
-                        h3 Ekstra jobb som må gjøres?
-                        .checkboxInput-container
-                            input#checkboxSilicon(type="checkbox" v-model="byggvask.silicon")
-                            label(for="checkboxSilicon").customCheckbox 
-                            span Skrape silicon
-                        .checkboxInput-container
-                            input#checkboxMaling(type="checkbox" v-model="byggvask.maling")
-                            label(for="checkboxMaling").customCheckbox
-                            span Skrape maling
-                        .button.small(v-on:click="setKvm") Videre
-
-                    .question(v-show="activeQuestion === 'winterQuestion'")
-                        h3 Hva ønsker du å utføre?
-                        .checkboxInput-container
-                            input#checkboxBroyting(type="checkbox" v-model="winter.broyting").customCheckbox
-                            label(for="checkboxBroyting") 
-                            span Brøyting
-                        .checkboxInput-container
-                            input#checkboxSalting(type="checkbox" v-model="winter.salting").customCheckbox
-                            label(for="checkboxSalting") 
-                            span Salting
-                        .button.small(v-on:click="setKgSalt") Videre
-
-                    .question.summary(v-show="activeQuestion === 'finish'")
-                        .summary-header
-                            h3 Oppsummering
-                        .firstCol
-                            span.main Type tjeneste:
-                            span.sous(v-if="extra") - Tillegg:
-                            br
-                            span.main(v-if="serviceType != 'Tilleggstjenester'") Antall kvadratmeter:
-                            span.main(v-if="numberOfWinterHours") Antall timer:
-                            span.main(v-if="numberOfKgSalt") Mengde salt:
-                            br
-                            span.main Total pris:
-                        .secondCol
-                            span.value {{serviceType}}
-                            span.value {{extra}}
-                            br
-                            .kvm-container(v-if="serviceType != 'Tilleggstjenester'")
-                                input.edit-Input(v-if="editKvmActive" type="number" v-model="numberOfKvm" required autofocus)
-                                span.value(v-else) {{numberOfKvm}} m&#178;
-                                span.edit(v-on:click="editKvm") {{editKvmText}}
-                            span.value(v-if="numberOfWinterHours") {{numberOfWinterHours}} timer
-                            span.value(v-if="numberOfKgSalt") {{numberOfKgSalt}} kg
-                            br
-                            span.value.price {{totalPrice}},- <div class="mva"> ekskl. mva</div>
-                        p.nb NB! Denne prisen er bare en prisantydning. Send en en forespørsel til oss for å få en nøyaktig pris.
-                        .send.button.small(v-on:click="setContact") Send til oss
-
-                    .question.contact(v-show="activeQuestion === 'contact'")
-                        h3 Prisforespørsel
-                        .textInput-container
-                            input(type="text" placeholder="Navn/Bedrift" v-model="contact.name" autofocus required).textInput
-                        .textInput-container
-                            input(type="mail" placeholder="E-post" v-model="contact.email" required).textInput
-                        .textInput-container
-                            textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
-                        .button() Send
+                    transition(name="fade-question" v-on:after-leave="activeQuestion = nextQuestion")
+                        .question.contact(v-show="activeQuestion === 'contact'" key="contact")
+                            h3 Prisforespørsel
+                            .textInput-container
+                                input(type="text" placeholder="Navn/Bedrift" v-model="contact.name" autofocus required).textInput
+                            .textInput-container
+                                input(type="mail" placeholder="E-post" v-model="contact.email" required).textInput
+                            .textInput-container
+                                textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
+                            .button() Send

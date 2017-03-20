@@ -31,15 +31,17 @@
     @include translate(0, -30px);
 }
 
-.question-group-enter-active {
-    transition: opacity 3s;
+.fade-question-enter-active, .fade-question-leave-active {
+    @include prefixAdv((
+        transition-property: opacity,
+        transition-duration: 1.5s
+    ))
 }
 
-.question-group-enter {
+.fade-question-enter, .fade-question-leave-to {
     opacity: 0;
 }
 
-.question-group-enter-to {
+.fade-question-enter-to, .fade-question-leave {
     opacity: 1;
-    transform: translateY(30px);
 }

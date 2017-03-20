@@ -14,6 +14,7 @@ new Vue({
         widgetActive: false,
         widgetContentActive: false,
         welcomeScreen: false,
+        nextQuestion: '',
 
         dagligVask: { active: false, pricePerKvm: 10 },
         flytteVask: { active: false, pricePerKvm: 43 },
@@ -26,65 +27,68 @@ new Vue({
         contact: { name: '', email: '', message: ''},
     },
     methods: {
+        next: function(nextQuestion) {
+            this.nextQuestion = nextQuestion;
+            this.activeQuestion = '';
+        },
         setServiceType: function(e) {
             var serviceType = e.target.textContent;
             this.serviceType = serviceType;
+            this.activeQuestion = '';
 
             if(serviceType == "Periodisk vask") {
-                this.activeQuestion = 'periodicQuestion';
+                this.nextQuestion = 'periodicQuestion';
             } else if(serviceType == "Gulvbehandling"){
-                this.activeQuestion = 'floorQuestion';
+                this.nextQuestion = 'floorQuestion';
             } else if(serviceType == "Tilleggstjenester"){
-                this.activeQuestion = 'extraQuestion';
+                this.nextQuestion = 'extraQuestion';
             } else if(serviceType == "Daglig vask"){
                 this.dagligVask.active = true;
-                this.activeQuestion = 'kvmQuestion';
+                this.nextQuestion = 'kvmQuestion';
             } else if(serviceType == "Flyttevask") {
                 this.flytteVask.active = true;
-                this.activeQuestion = 'kvmQuestion';
+                this.nextQuestion = 'kvmQuestion';
             }
-        },
-        setKvm: function() {
-            this.activeQuestion = 'kvmQuestion';
         },
         setKgSalt: function() {
             this.activeQuestion = 'kgSaltQuestion';
         },
-        setWinterHours: function() {
-            this.activeQuestion = 'winterHoursQuestion';
-        },
         setPeriodicService: function(e) {
             var periodicType = e.target.textContent;
             this.serviceType = periodicType;
+            this.activeQuestion = '';
 
             if(periodicType == 'Vindusvask') {
                 this.vindusvask.active = true;
-                this.activeQuestion = 'windowQuestion';
+                this.nextQuestion = 'windowQuestion';
             } else if(periodicType == 'Byggvask') {
                 this.byggvask.active = true;
-                this.activeQuestion = 'byggQuestion';
+                this.nextQuestion = 'byggQuestion';
             } else if(periodicType == 'Tepperens') {
                 this.tepperens.active = true;
-                this.activeQuestion = 'kvmQuestion';
+                this.nextQuestion = 'kvmQuestion';
             } else if(periodicType == 'Nedvask') {
                 this.nedvask.active = true;
-                this.activeQuestion = 'kvmQuestion';
+                this.nextQuestion = 'kvmQuestion';
             }
         },
         setExtraService: function(e) {
             var extraType = e.target.textContent;
-            this.activeQuestion = 'winterQuestion';
+            this.nextQuestion = 'winterQuestion';
+            this.activeQuestion = '';
         },
         finish: function() {
             this.addExtraToArray();
-            this.activeQuestion = 'finish';
+            this.nextQuestion = 'finish';
+            this.activeQuestion = '';
         },
         setContact: function() {
             this.activeQuestion = 'contact';
         },
         restart: function() {
             this.resetData();
-            this.activeQuestion = 'servicesQuestion';
+            this.nextQuestion = 'servicesQuestion';
+            this.activeQuestion = '';
         },
         resetData: function() {
             this.dagligVask.active = false;
