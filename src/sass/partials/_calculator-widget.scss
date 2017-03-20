@@ -187,12 +187,6 @@
             }
             
             .question {
-                display: none;
-
-                &.active {
-                    display: block;
-                }
-
                 &.contact {
                     .textInput {
                         font-size: 20px;

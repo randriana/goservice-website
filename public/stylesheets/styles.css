@@ -6519,84 +6519,80 @@ button.close {
         font-size: 35px;
         font-weight: 100;
         color: #b3b3b3; }
-    #calculator-section .calculator-widget-container .calculator-widget-content .question {
-      display: none; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.active {
-        display: block; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.contact .textInput {
-        font-size: 20px; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.contact input[type="text"] {
-        margin-bottom: 15px; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.contact .textareainput {
-        height: 85px;
-        margin-bottom: 35px; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol {
-        float: left;
-        width: 50%;
-        text-align: right;
-        padding: 0 20px; }
-        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .main, #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .sous {
-          display: block;
-          font-weight: 100;
-          color: #fff;
-          margin-bottom: 5px; }
-        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .main {
-          font-size: 20px; }
-        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .sous {
-          font-weight: 100;
-          font-size: 18px; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol {
-        float: right;
-        width: 50%;
-        padding-left: 20px; }
-        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .value {
-          display: block;
-          font-weight: 100;
-          font-size: 18px;
-          line-height: 29px;
-          margin-bottom: 3px;
-          color: #b3b3b3; }
-          #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .value.price {
-            display: inline; }
-        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container {
-          position: relative; }
-          #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container .edit {
-            position: absolute;
-            top: 8px;
-            right: 50px;
-            font-weight: 100;
-            font-size: 10px;
-            color: #8d8d8d;
-            cursor: pointer; }
-          #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container .edit-Input {
-            width: 100px;
-            background: none;
-            color: #b3b3b3;
-            font-size: 18px;
-            border: none;
-            border-bottom: 1px solid #cccccc; }
-            #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container .edit-Input:focus {
-              outline: none; }
-        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .mva {
-          display: inline;
-          font-size: 13px; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary p.nb {
-        float: left;
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.contact .textInput {
+      font-size: 20px; }
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.contact input[type="text"] {
+      margin-bottom: 15px; }
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.contact .textareainput {
+      height: 85px;
+      margin-bottom: 35px; }
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol {
+      float: left;
+      width: 50%;
+      text-align: right;
+      padding: 0 20px; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .main, #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .sous {
         display: block;
-        font-size: 11px;
-        text-align: left;
+        font-weight: 100;
         color: #fff;
-        margin: 20px 25px;
-        width: 65%; }
-      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .send {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%); }
+        margin-bottom: 5px; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .main {
+        font-size: 20px; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .firstCol .sous {
+        font-weight: 100;
+        font-size: 18px; }
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol {
+      float: right;
+      width: 50%;
+      padding-left: 20px; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .value {
+        display: block;
+        font-weight: 100;
+        font-size: 18px;
+        line-height: 29px;
+        margin-bottom: 3px;
+        color: #b3b3b3; }
+        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .value.price {
+          display: inline; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container {
+        position: relative; }
+        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container .edit {
+          position: absolute;
+          top: 8px;
+          right: 50px;
+          font-weight: 100;
+          font-size: 10px;
+          color: #8d8d8d;
+          cursor: pointer; }
+        #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container .edit-Input {
+          width: 100px;
+          background: none;
+          color: #b3b3b3;
+          font-size: 18px;
+          border: none;
+          border-bottom: 1px solid #cccccc; }
+          #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .kvm-container .edit-Input:focus {
+            outline: none; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .secondCol .mva {
+        display: inline;
+        font-size: 13px; }
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.summary p.nb {
+      float: left;
+      display: block;
+      font-size: 11px;
+      text-align: left;
+      color: #fff;
+      margin: 20px 25px;
+      width: 65%; }
+    #calculator-section .calculator-widget-container .calculator-widget-content .question.summary .send {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
     #calculator-section .calculator-widget-container input::-webkit-outer-spin-button, #calculator-section .calculator-widget-container input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
