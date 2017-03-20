@@ -1,21 +1,15 @@
-.fade-enter-active {
-    @include prefixAdv((
-        transition-property: opacity,
-        transition-duration: 1.5s
-    ))
-}
-.fade-fast-enter-active, .fade-fast-leave-active {
+.fade-enter-active, .fade-leave-active {
     @include prefixAdv((
         transition-property: opacity,
         transition-duration: 1.5s
     ))
 }
 
-.fade-enter, .fade-fast-enter, .fade-fast-leave-to {
+.fade-enter, .fade-leave-to {
     opacity: 0;
 }
 
-.fade-enter-to, .fade-fast-enter-to {
+.fade-enter-to, .fade-leave {
     opacity: 1;
 }
 
@@ -29,19 +23,4 @@
 .fade-transform-leave-to, .fade-transform-delay-leave-to {
     opacity: 0;
     @include translate(0, -30px);
-}
-
-.fade-question-enter-active, .fade-question-leave-active {
-    @include prefixAdv((
-        transition-property: opacity,
-        transition-duration: 1.5s
-    ))
-}
-
-.fade-question-enter, .fade-question-leave-to {
-    opacity: 0;
-}
-
-.fade-question-enter-to, .fade-question-leave {
-    opacity: 1;
 }

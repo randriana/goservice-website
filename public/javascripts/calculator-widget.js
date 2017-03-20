@@ -3,12 +3,10 @@ new Vue({
     data: {
         numberOfKvm: '',
         serviceType: '',
-        periodicService: '',
         numberOfKgSalt: '',
         numberOfWinterHours: '',
         activeQuestion: 'servicesQuestion',
         extra: '',
-        editKvmActive: false,
         editKvmText: 'Endre',
         startActive: true,
         widgetActive: false,
@@ -50,8 +48,13 @@ new Vue({
                 this.nextQuestion = 'kvmQuestion';
             }
         },
-        setKgSalt: function() {
-            this.activeQuestion = 'kgSaltQuestion';
+        ifSalt: function() {
+            if(this.winter.salting) {
+                this.nextQuestion = 'kgSaltQuestion'
+            } else {
+                this.nextQuestion = 'winterHoursQuestion';
+            }
+            this.activeQuestion = '';
         },
         setPeriodicService: function(e) {
             var periodicType = e.target.textContent;
@@ -82,14 +85,6 @@ new Vue({
             this.nextQuestion = 'finish';
             this.activeQuestion = '';
         },
-        setContact: function() {
-            this.activeQuestion = 'contact';
-        },
-        restart: function() {
-            this.resetData();
-            this.nextQuestion = 'servicesQuestion';
-            this.activeQuestion = '';
-        },
         resetData: function() {
             this.dagligVask.active = false;
             this.flytteVask.active = false;
@@ -106,7 +101,6 @@ new Vue({
             this.winter.salting = false;
             this.numberOfKvm = '';
             this.serviceType = '';
-            this.periodicService = '';
             this.numberOfKgSalt = '';
             this.numberOfWinterHours = '';
             this.extra = '';
@@ -122,14 +116,6 @@ new Vue({
             })
             self.extra = self.extra.slice(0, -2);
         },
-        editKvm: function() {
-            this.editKvmActive = this.editKvmActive ? false : true;
-            if(this.editKvmActive) {
-                this.editKvmText = 'Ferdig'
-            } else {
-                this.editKvmText = 'Endre'
-            }
-        }
     },
 
     computed: {

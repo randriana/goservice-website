@@ -6440,12 +6440,15 @@ button.close {
       text-align: center;
       font-size: 20px;
       font-weight: 100;
-      color: #FFF; }
+      color: #FFF;
+      background-color: transparent; }
       #calculator-section .calculator-widget-container .calculator-widget-content .button.small {
         width: 35%;
         font-size: 25px;
         line-height: 25px;
         margin-top: 50px; }
+      #calculator-section .calculator-widget-container .calculator-widget-content .button:focus {
+        outline: none; }
     #calculator-section .calculator-widget-container .calculator-widget-content .checkboxInput-container {
       position: relative;
       left: 30%;
@@ -6514,7 +6517,7 @@ button.close {
           outline: none; }
       #calculator-section .calculator-widget-container .calculator-widget-content .textInput-container .enhet {
         position: absolute;
-        bottom: 0px;
+        bottom: 90px;
         right: 90px;
         font-size: 35px;
         font-weight: 100;
@@ -6598,18 +6601,14 @@ button.close {
       margin: 0;
       /* <-- Apparently some margin are still there even though it's hidden */ }
 
-.fade-enter-active {
+.fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: 1.5s; }
 
-.fade-fast-enter-active, .fade-fast-leave-active {
-  transition-property: opacity;
-  transition-duration: 1.5s; }
-
-.fade-enter, .fade-fast-enter, .fade-fast-leave-to {
+.fade-enter, .fade-leave-to {
   opacity: 0; }
 
-.fade-enter-to, .fade-fast-enter-to {
+.fade-enter-to, .fade-leave {
   opacity: 1; }
 
 .fade-transform-leave-active {
@@ -6631,16 +6630,6 @@ button.close {
   -ms-transform: translate(0, -30px);
   -o-transform: translate(0, -30px);
   transform: translate(0, -30px); }
-
-.fade-question-enter-active, .fade-question-leave-active {
-  transition-property: opacity;
-  transition-duration: 1.5s; }
-
-.fade-question-enter, .fade-question-leave-to {
-  opacity: 0; }
-
-.fade-question-enter-to, .fade-question-leave {
-  opacity: 1; }
 
 body {
   font-family: "open-sans", sans-serif;
