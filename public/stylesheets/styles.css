@@ -6121,6 +6121,10 @@ button.close {
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg); }
+    .widget-container .widget-content-container #daglig-vask, .widget-container .widget-content-container #periodiske-vask, .widget-container .widget-content-container #gulvbehandling, .widget-container .widget-content-container #flyttevask, .widget-container .widget-content-container #tilleggstjenester {
+      display: none; }
+      .widget-container .widget-content-container #daglig-vask:target, .widget-container .widget-content-container #periodiske-vask:target, .widget-container .widget-content-container #gulvbehandling:target, .widget-container .widget-content-container #flyttevask:target, .widget-container .widget-content-container #tilleggstjenester:target {
+        display: block; }
     .widget-container .widget-content-container.middle-out {
       top: 160px;
       left: 85px;

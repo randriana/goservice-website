@@ -78,6 +78,14 @@
 
         @include rotate(90deg);
 
+        #daglig-vask, #periodiske-vask, #gulvbehandling, #flyttevask, #tilleggstjenester {
+            display: none;
+
+            &:target {
+                display: block;
+            }
+        }
+
         &.middle-out {
             top: $first-line-top + $first-line-height;
             left: 85px;
