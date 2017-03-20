@@ -19,6 +19,7 @@ new Vue({
         tepperens: { active: false, pricePerKvm: 25 },
         gulvbehandling: { boning: false, skuring: false, priceBoning: 25, priceSkuring: 20 },
         winter: { broyting: false, salting: false, broytingPerHour: 500, saltingPerHour: 250, saltPerKg: 2 },
+        contact: { name: '', email: '', message: ''},
     },
     methods: {
         setServiceType: function(e) {
@@ -73,6 +74,9 @@ new Vue({
         finish: function() {
             this.addExtraToArray();
             this.activeQuestion = 'finish';
+        },
+        setContact: function() {
+            this.activeQuestion = 'contact';
         },
         restart: function() {
             this.resetData();

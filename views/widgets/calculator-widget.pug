@@ -1,5 +1,4 @@
 .container-fluid
-    h2 Priskalkulator
     .calculator-widget-container
         span.startOver(v-show="activeQuestion != 'servicesQuestion'" v-on:click="restart") Begynne på nytt?
         .calculator-widget-content
@@ -112,4 +111,14 @@
                     br
                     span.value.price {{totalPrice}},- <div class="mva"> ekskl. mva</div>
                 p.nb NB! Denne prisen er bare en prisantydning. Send en en forespørsel til oss for å få en nøyaktig pris.
-                .send.button.small Send til oss
+                .send.button.small(v-on:click="setContact") Send til oss
+
+            .question.contact(v-bind:class="[activeQuestion === 'contact' ? 'active' : '' ]")
+                h3 Prisforespørsel
+                .textInput-container
+                    input(type="text" placeholder="Navn/Bedrift" v-model="contact.name" autofocus required).textInput
+                .textInput-container
+                    input(type="mail" placeholder="E-post" v-model="contact.email" required).textInput
+                .textInput-container
+                    textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
+                .button() Send

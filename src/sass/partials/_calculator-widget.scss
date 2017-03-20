@@ -1,13 +1,39 @@
 #calculator-section {
     background-color: #F0F0F0;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 
     h2 {
         text-align: center;
+        padding: 20px 0 50px;
+        margin: 0;
+        color: #44a2cb;
+        font-weight: 100;
+    }
+
+    .start-container {
+        width: 450px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        p {
+            font-size: 25px;
+            font-weight: 100;
+            text-align: center;
+        }
+        .button {
+            text-align: center;
+            margin: 50px auto 0;
+            font-size: 20px;
+            color: #44a2cb;
+            width: 200px;
+            padding: 10px;
+            border: 4px solid #C5C5C5;
+        }
     }
 
     .calculator-widget-container {
         position: relative;
+        display: none;
         margin: 0 auto;
         z-index: 5;
         height: 500px;
@@ -153,6 +179,19 @@
 
                 &.active {
                     display: block;
+                }
+
+                &.contact {
+                    .textInput {
+                        font-size: 20px;
+                    }
+                    input[type="text"] {
+                        margin-bottom: 15px;
+                    }
+                    .textareainput {
+                        height: 85px;
+                        margin-bottom: 35px;
+                    }
                 }
                 &.summary {
                     .firstCol {
