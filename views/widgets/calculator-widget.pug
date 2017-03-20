@@ -9,8 +9,8 @@
                 .calculator-widget-content(v-show="widgetContentActive")
                     .question(v-bind:class="[activeQuestion === 'servicesQuestion' ? 'active' : '' ]")
                         h3 Hva kan vi hjelpe deg med?
-                        each bText in ['Daglig vask', 'Periodisk vask', 'Gulvbehandling', 'Flyttevask', 'Tilleggstjenester']
-                            .button(v-on:click="setServiceType")= bText
+                        .button(v-for="bText in ['Daglig vask', 'Periodisk vask', 'Gulvbehandling', 'Flyttevask', 'Tilleggstjenester']" 
+                            v-on:click="setServiceType") {{bText}}
 
                     .question(v-bind:class="[activeQuestion === 'periodicQuestion' ? 'active' : '' ]")
                         h3 Hvilken type periodisk vask trenger du?

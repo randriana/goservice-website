@@ -30,3 +30,16 @@
     opacity: 0;
     @include translate(0, -30px);
 }
+
+.question-group-enter-active {
+    transition: opacity 3s;
+}
+
+.question-group-enter {
+    opacity: 0;
+}
+
+.question-group-enter-to {
+    opacity: 1;
+    transform: translateY(30px);
+}
