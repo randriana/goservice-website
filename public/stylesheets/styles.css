@@ -6101,10 +6101,10 @@ button.close {
     -ms-transform: translateX(425px);
     -o-transform: translateX(425px);
     transform: translateX(425px);
-    -webkit-transition: height 1s;
-    -moz-transition: height 1s;
-    -o-transition: height 1s;
-    transition: height 1s; }
+    -webkit-transition: height 1s 0s;
+    -moz-transition: height 1s 0s;
+    -o-transition: height 1s 0s;
+    transition: height 1s 0s; }
     .widget-container .widget-first-line.short {
       height: 0; }
   .widget-container .widget-content-container {
@@ -6378,7 +6378,9 @@ button.close {
     color: #44a2cb;
     font-weight: 100; }
   #calculator-section .start-container {
+    position: relative;
     width: 450px;
+    height: 300px;
     margin: 0 auto;
     padding: 0 20px; }
     #calculator-section .start-container p {
@@ -6386,16 +6388,18 @@ button.close {
       font-weight: 100;
       text-align: center; }
     #calculator-section .start-container .button {
+      position: absolute;
+      bottom: 0;
+      left: 125px;
       text-align: center;
-      margin: 50px auto 0;
       font-size: 20px;
       color: #44a2cb;
       width: 200px;
       padding: 10px;
-      border: 4px solid #C5C5C5; }
+      border: 4px solid #C5C5C5;
+      cursor: pointer; }
   #calculator-section .calculator-widget-container {
     position: relative;
-    display: none;
     margin: 0 auto;
     z-index: 5;
     height: 500px;
@@ -6405,6 +6409,12 @@ button.close {
     -webkit-box-shadow: 0 0 50px 0;
     -moz-box-shadow: 0 0 50px 0;
     box-shadow: 0 0 50px 0; }
+    #calculator-section .calculator-widget-container .welcome-screen {
+      text-align: center;
+      margin-top: 180px;
+      font-size: 70px;
+      font-weight: 100;
+      color: #44a2cb; }
     #calculator-section .calculator-widget-container .startOver {
       position: absolute;
       bottom: 10px;
@@ -6591,6 +6601,40 @@ button.close {
       -webkit-appearance: none;
       margin: 0;
       /* <-- Apparently some margin are still there even though it's hidden */ }
+
+.fade-enter-active {
+  transition-property: opacity;
+  transition-duration: 1.5s; }
+
+.fade-fast-enter-active, .fade-fast-leave-active {
+  transition-property: opacity;
+  transition-duration: 1.5s; }
+
+.fade-enter, .fade-fast-enter, .fade-fast-leave-to {
+  opacity: 0; }
+
+.fade-enter-to, .fade-fast-enter-to {
+  opacity: 1; }
+
+.fade-transform-leave-active {
+  -webkit-transition: opacity 1s 0.2s ease-in, transform 1s 0.2s ease-in;
+  -moz-transition: opacity 1s 0.2s ease-in, transform 1s 0.2s ease-in;
+  -o-transition: opacity 1s 0.2s ease-in, transform 1s 0.2s ease-in;
+  transition: opacity 1s 0.2s ease-in, transform 1s 0.2s ease-in; }
+
+.fade-transform-delay-leave-active {
+  -webkit-transition: opacity 1s 1s, transform 1s 1s;
+  -moz-transition: opacity 1s 1s, transform 1s 1s;
+  -o-transition: opacity 1s 1s, transform 1s 1s;
+  transition: opacity 1s 1s, transform 1s 1s; }
+
+.fade-transform-leave-to, .fade-transform-delay-leave-to {
+  opacity: 0;
+  -webkit-transform: translate(0, -30px);
+  -moz-transform: translate(0, -30px);
+  -ms-transform: translate(0, -30px);
+  -o-transform: translate(0, -30px);
+  transform: translate(0, -30px); }
 
 body {
   font-family: "open-sans", sans-serif;

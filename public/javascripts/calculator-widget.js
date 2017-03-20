@@ -10,6 +10,10 @@ new Vue({
         extra: '',
         editKvmActive: false,
         editKvmText: 'Endre',
+        startActive: true,
+        widgetActive: false,
+        widgetContentActive: false,
+        welcomeScreen: false,
 
         dagligVask: { active: false, pricePerKvm: 10 },
         flytteVask: { active: false, pricePerKvm: 43 },

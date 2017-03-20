@@ -37,10 +37,12 @@ block content
     img(src="images/fancy-section.svg")
   #calculator-section
     h2 Priskalkulator
-    .start-container
-      p Finn ut hvor mye det vil koste for deg umiddelbart. 
-        |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
-      .button Start priskalkulator
+    .start-container(v-if="!widgetActive")
+      transition(name="fade-transform")
+        p(v-if="startActive") Finn ut hvor mye det vil koste for deg umiddelbart. 
+          |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
+      transition(name="fade-transform-delay"  v-on:after-leave="widgetActive = true")
+        .button(v-if="startActive" @click="startActive = false") Start priskalkulator
     include ./widgets/calculator-widget
 
 

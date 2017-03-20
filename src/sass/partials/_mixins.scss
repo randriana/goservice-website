@@ -1,8 +1,37 @@
-@mixin transition($property, $duration) {
-    -webkit-transition: $property $duration;
-    -moz-transition: $property $duration;
-    -o-transition: $property $duration;
-    transition: $property $duration;
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin prefixAdv($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+
+
+
+@mixin transition($property, $duration, $delay: 0s) {
+    -webkit-transition: $property $duration $delay;
+    -moz-transition: $property $duration $delay;
+    -o-transition: $property $duration $delay;
+    transition: $property $duration $delay;
+}
+
+@mixin transition-v2($property...) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -o-transition: $property;
+    transition: $property;
 }
 
 @mixin rotate($deg) {
@@ -19,6 +48,14 @@
     -ms-transform: translateX($xValue);
     -o-transform: translateX($xValue);
     transform: translateX($xValue);
+}
+
+@mixin translateY($Value) {
+    -webkit-transform: translateY($Value);
+    -moz-transform: translateY($Value);
+    -ms-transform: translateY($Value);
+    -o-transform: translateY($Value);
+    transform: translateY($Value);
 }
 
 @mixin translate($xValue, $yValue)  {
