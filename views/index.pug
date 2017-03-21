@@ -44,6 +44,23 @@ block content
       transition(name="fade-transform-delay"  v-on:after-leave="widgetActive = true")
         .button(v-if="startActive" @click="startActive = false") Start priskalkulator
     include ./widgets/calculator-widget
+  .fancy-section
+    img(src="images/fancy-section-flipped.svg")
+  #about
+    .container-fluid
+      .row
+        .col-sm-8
+          .content-section
+            h2 Om oss
+            p Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester.
+            span I Go’ Service AS vil vi ALLTID prioritere og forbedre oss i:
+            ul
+              each val in ['Nøyaktighet', 'Hjelpsomhet', 'Tilfredstille kunde', 'Stå på vilje', 'Høflighet', 'Ærlighet']
+                li= val
+        .col-sm-4.no-padding
+          .image-section
+            img(src="images/fancy-img.svg")
+  include ./widgets/why-us-widget
 
 
       

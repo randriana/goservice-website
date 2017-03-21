@@ -78,7 +78,7 @@
 
         @include rotate(90deg);
 
-        #daglig-vask, #periodiske-vask, #gulvbehandling, #flyttevask, #tilleggstjenester {
+        #daglig-vask, #periodiske-vask, #gulvbehandling, #flyttevask, #tilleggstjenester, #forretningsfilosofi, #tilgjengelighet, #fornoyd-garanti, #offentlig-godkjent  {
             display: none;
 
             &:target {
@@ -126,6 +126,17 @@
                     line-height: 33px;
                     margin-right: 150px;
                     text-align: justify;
+
+                    &.much-text {
+                        padding: 0 20px;
+                        font-size: 15px;
+                        line-height: 28px;
+                    }
+
+                    &.very-much-text {
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
                 }
             }
 

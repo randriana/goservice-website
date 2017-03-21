@@ -1,4 +1,5 @@
-new Vue({
+var calculatorApp 
+    = new Vue({
     el: '#calculator-section',
     data: {
         numberOfKvm: '',
@@ -8,11 +9,16 @@ new Vue({
         activeQuestion: 'servicesQuestion',
         extra: '',
         editKvmText: 'Endre',
-        startActive: true,
+        /*startActive: true,
         widgetActive: false,
         widgetContentActive: false,
+        welcomeScreen: false,*/
+        startActive: false,
+        widgetActive: true,
+        widgetContentActive: true,
         welcomeScreen: false,
         nextQuestion: '',
+        error: false,
 
         dagligVask: { active: false, pricePerKvm: 10 },
         flytteVask: { active: false, pricePerKvm: 43 },
@@ -47,6 +53,14 @@ new Vue({
                 this.flytteVask.active = true;
                 this.nextQuestion = 'kvmQuestion';
             }
+        },
+        checkRequired: function() {
+            if(this.vindusvask.inside || this.vindusvask.outside || this.gulvbehandling.boning || this.gulvbehandling.skuring) {
+                this.error = false;
+                this.next('kvmQuestion');
+            } else {
+                this.error = true
+            } 
         },
         ifSalt: function() {
             if(this.winter.salting) {

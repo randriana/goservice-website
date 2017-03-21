@@ -1,6 +1,7 @@
 #calculator-section {
     background-color: #F0F0F0;
-    padding-bottom: 100px;
+    padding: 100px 0;
+    height: 800px;
 
     h2 {
         text-align: center;
@@ -188,6 +189,13 @@
                     font-weight: 100;
                     color: #b3b3b3;
                 }
+            }
+
+            .error {
+                position: absolute;
+                left: 50%;
+                @include translateX(-50%);
+                color: #ff0033;
             }
             
             .question {

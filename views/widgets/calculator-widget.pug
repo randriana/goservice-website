@@ -55,7 +55,9 @@
                                 input#checkboxOutside(type="checkbox" v-model="vindusvask.outside")
                                 label(for="checkboxOutside").customCheckbox
                                 span Utvendig
-                            .button.small(v-on:click="next('kvmQuestion')") Videre
+                            .error(v-if="error")
+                                span Du må velge minst én side
+                            .button.small(v-on:click="checkRequired") Videre
 
                         .question(v-if="activeQuestion === 'floorQuestion'" key="floorQuestion")
                             h3 Angi type gulvbehandling?
@@ -67,7 +69,9 @@
                                 input#checkboxSkuring(type="checkbox" v-model="gulvbehandling.skuring")
                                 label(for="checkboxSkuring").customCheckbox 
                                 span Skuring
-                            .button.small(v-on:click="next('kvmQuestion')") Videre
+                            .error(v-if="error")
+                                span Du må velge minst én type
+                            .button.small(v-on:click="checkRequired") Videre
 
                         .question(v-if="activeQuestion === 'byggQuestion'" key="byggQuestion")
                             h3 Ekstra jobb som må gjøres?
