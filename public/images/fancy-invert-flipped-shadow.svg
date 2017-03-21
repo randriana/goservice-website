@@ -10,17 +10,28 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="381mm"
-   height="27.78125mm"
-   viewBox="0 0 381 27.78125"
+   height="32.78125mm"
+   viewBox="0 0 381 32.78125"
    version="1.1"
    id="svg14027"
    inkscape:version="0.92.0 r"
-   sodipodi:docname="fancy-section.svg"
-   inkscape:export-filename="/Users/rinaandriana/webdev/repos/goservice/public/images/fancy-section.png"
-   inkscape:export-xdpi="100"
-   inkscape:export-ydpi="100">
+   sodipodi:docname="fancy-invert-flipped.svg">
   <defs
-     id="defs14021" />
+     id="defs14021">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter7682"
+       x="-0.0193125"
+       width="1.038625"
+       y="-0.26485714"
+       height="1.5297143">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.0658593"
+         id="feGaussianBlur7684" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -28,9 +39,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1654694"
-     inkscape:cx="689.87005"
-     inkscape:cy="162.35399"
+     inkscape:zoom="0.82411131"
+     inkscape:cx="690.66399"
+     inkscape:cy="116.38159"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,7 +54,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:snap-nodes="false" />
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata14024">
     <rdf:RDF>
@@ -60,12 +72,21 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(79.005771,-185.36835)">
+     transform="translate(79.005771,-180.36835)">
     <path
-       style="opacity:1;fill:#3d4853;fill-opacity:1;stroke:none;stroke-width:3.73536444;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 1440,237.5957 H 0 v 105 z"
+       inkscape:connector-curvature="0"
+       id="path7127"
+       d="M -79.005771,213.24922 H 301.99422 v -27.78125 z"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96192807;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter7682)"
+       transform="matrix(1.0555999,-0.00573484,0.0054327,0.99998524,-17.798892,1.7374872)"
+       inkscape:transform-center-x="201.46779"
+       inkscape:transform-center-y="14.900418" />
+    <path
+       style="opacity:1;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.98831517;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -79.005771,213.24922 H 301.99422 v -27.78125 z"
        id="path14600"
        inkscape:connector-curvature="0"
-       transform="matrix(0.26458333,0,0,0.26458333,-79.005771,122.50449)" />
+       inkscape:transform-center-x="190.70543"
+       inkscape:transform-center-y="13.805275" />
   </g>
 </svg>

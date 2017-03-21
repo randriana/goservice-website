@@ -15,10 +15,7 @@
    version="1.1"
    id="svg14027"
    inkscape:version="0.92.0 r"
-   sodipodi:docname="fancy-section.svg"
-   inkscape:export-filename="/Users/rinaandriana/webdev/repos/goservice/public/images/fancy-section.png"
-   inkscape:export-xdpi="100"
-   inkscape:export-ydpi="100">
+   sodipodi:docname="fancy-invert-flipped.svg">
   <defs
      id="defs14021" />
   <sodipodi:namedview
@@ -28,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1654694"
-     inkscape:cx="689.87005"
-     inkscape:cy="162.35399"
+     inkscape:zoom="1.0253827"
+     inkscape:cx="649.23205"
+     inkscape:cy="159.22866"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -42,8 +39,7 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:snap-nodes="false" />
+     fit-margin-bottom="0" />
   <metadata
      id="metadata14024">
     <rdf:RDF>
@@ -62,10 +58,9 @@
      id="layer1"
      transform="translate(79.005771,-185.36835)">
     <path
-       style="opacity:1;fill:#3d4853;fill-opacity:1;stroke:none;stroke-width:3.73536444;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 1440,237.5957 H 0 v 105 z"
+       style="opacity:1;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.98831517;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -79.005771,213.1496 H 301.99422 v -27.78125 z"
        id="path14600"
-       inkscape:connector-curvature="0"
-       transform="matrix(0.26458333,0,0,0.26458333,-79.005771,122.50449)" />
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

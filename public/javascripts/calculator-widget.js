@@ -1,5 +1,4 @@
-var calculatorApp 
-    = new Vue({
+new Vue({
     el: '#calculator-section',
     data: {
         numberOfKvm: '',
@@ -27,6 +26,26 @@ var calculatorApp
         contact: { name: '', email: '', message: ''},
     },
     methods: {
+        hallo: function() {
+            console.log('hallo');
+        },
+        startLeave: function(el, done) {
+            var index = el.dataset.index;
+            var delay = index * 300;
+            
+            setTimeout(function() {
+                $(el).addClass('fade-transform-before').addClass('fade-transform');
+            }, delay);
+
+            /* call done after the last is finished element */
+            if(index == 3) {
+                $(el).on("webkitTransitionEnd transitionend oTransitionEnd otransitionend", function() {
+                    done();
+                })
+            }
+            
+
+        },
         next: function(nextQuestion) {
             this.nextQuestion = nextQuestion;
             this.activeQuestion = '';

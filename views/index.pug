@@ -1,5 +1,4 @@
 extends ./layouts/layout
-
 block content
   header
     .video-container
@@ -33,34 +32,26 @@ block content
         img(src="images/renpluss.png")
       .partner-logo
         img(src="images/bergenflytte.png")
-  .fancy-section
-    img(src="images/fancy-section.svg")
-  #calculator-section
-    h2 Priskalkulator
+    img(src="images/fancy-invert-flipped.svg").fancy-section
+  section#calculator-section
     .start-container(v-if="!widgetActive")
-      transition(name="fade-transform")
-        p(v-if="startActive") Finn ut hvor mye det vil koste for deg umiddelbart. 
+      transition-group(v-on:after-leave="widgetActive = true" v-on:leave="startLeave" v-bind:css="false")
+        h2(v-if="startActive" key="header" data-index="1") Priskalkulator
+        p(v-if="startActive" key="text" data-index="2") Finn ut hvor mye det vil koste for deg umiddelbart. 
           |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
-      transition(name="fade-transform-delay"  v-on:after-leave="widgetActive = true")
-        .button(v-if="startActive" @click="startActive = false") Start priskalkulator
+        .button(v-if="startActive" @click="startActive = false" key="button" data-index="3") Start priskalkulator
     include ./widgets/calculator-widget
-  .fancy-section
-    img(src="images/fancy-section-flipped.svg")
-  #about
-    .container-fluid
-      .row
-        .col-sm-8
-          .content-section
-            h2 Om oss
-            p Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester.
-            span I Go’ Service AS vil vi ALLTID prioritere og forbedre oss i:
-            ul
-              each val in ['Nøyaktighet', 'Hjelpsomhet', 'Tilfredstille kunde', 'Stå på vilje', 'Høflighet', 'Ærlighet']
-                li= val
-        .col-sm-4.no-padding
-          .image-section
-            img(src="images/fancy-img.svg")
-  include ./widgets/why-us-widget
-
-
-      
+  section#about
+    img(src="images/fancy-invert-shadow.svg").fancy-section
+    .content-section
+      h2 Om oss
+      p Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester.
+      span I Go’ Service AS vil vi ALLTID prioritere og forbedre oss i:
+      ul
+        each val in ['Nøyaktighet', 'Hjelpsomhet', 'Tilfredstille kunde', 'Stå på vilje', 'Høflighet', 'Ærlighet']
+          li= val
+    .image-section
+      img(src="images/vacuum-cleaner.jpg")
+  section#why-us
+    h2 Hvorfor velge oss?
+    include ./widgets/why-us-widget
