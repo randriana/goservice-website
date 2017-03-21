@@ -27,7 +27,7 @@
                         .question(v-if="activeQuestion === 'kvmQuestion'" key="kvmQuestion")
                             h3 Hvor mange kvadratmeter gjelder det?
                             form(v-on:submit.prevent="finish").textInput-container
-                                input(type="number" v-model="numberOfKvm" autofocus required).textInput
+                                input(type="number" v-model="numberOfKvm" min="1" autofocus required).textInput
                                 span.enhet m&#178;
                                 input.button(type="submit" value="Videre") 
                             
@@ -41,7 +41,7 @@
                         .question(v-if="activeQuestion === 'winterHoursQuestion'" key="winterHoursQuestion")
                             h3 Hvor mange timer arbeid trengs det?
                             form(v-on:submit.prevent="finish").textInput-container
-                                input(type="number" v-model="numberOfWinterHours" autofocus required).textInput
+                                input(type="number" v-model="numberOfWinterHours" min="0" autofocus required).textInput
                                 span.enhet timer
                                 input.button(type="submit" value="Videre")
                     
@@ -49,11 +49,11 @@
                             h3 Angi hvilke sider du vil ha vasket?
                             .checkboxInput-container
                                 input#checkboxInside(type="checkbox" v-model="vindusvask.inside")
-                                label(for="checkboxInside").customCheckbox
+                                label(for="checkboxInside" v-bind:class="{ hasError: error }")
                                 span Innvendig
                             .checkboxInput-container
                                 input#checkboxOutside(type="checkbox" v-model="vindusvask.outside")
-                                label(for="checkboxOutside").customCheckbox
+                                label(for="checkboxOutside" v-bind:class="{ hasError: error }")
                                 span Utvendig
                             .error(v-if="error")
                                 span Du må velge minst én side
@@ -63,11 +63,11 @@
                             h3 Angi type gulvbehandling?
                             .checkboxInput-container
                                 input#checkboxBoning(type="checkbox" v-model="gulvbehandling.boning")
-                                label(for="checkboxBoning").customCheckbox
+                                label(for="checkboxBoning" v-bind:class="{ hasError: error }")
                                 span Boning
                             .checkboxInput-container
                                 input#checkboxSkuring(type="checkbox" v-model="gulvbehandling.skuring")
-                                label(for="checkboxSkuring").customCheckbox 
+                                label(for="checkboxSkuring" v-bind:class="{ hasError: error }") 
                                 span Skuring
                             .error(v-if="error")
                                 span Du må velge minst én type

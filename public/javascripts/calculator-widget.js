@@ -9,13 +9,9 @@ var calculatorApp
         activeQuestion: 'servicesQuestion',
         extra: '',
         editKvmText: 'Endre',
-        /*startActive: true,
+        startActive: true,
         widgetActive: false,
         widgetContentActive: false,
-        welcomeScreen: false,*/
-        startActive: false,
-        widgetActive: true,
-        widgetContentActive: true,
         welcomeScreen: false,
         nextQuestion: '',
         error: false,
@@ -118,6 +114,7 @@ var calculatorApp
             this.numberOfKgSalt = '';
             this.numberOfWinterHours = '';
             this.extra = '';
+            this.error = false;
         },
         addExtraToArray: function() {
             var self = this;

@@ -1,8 +1,6 @@
 .fade-enter-active, .fade-leave-active {
-    @include prefixAdv((
-        transition-property: opacity,
-        transition-duration: 1.2s
-    ))
+    transition-property: opacity;
+    transition-duration: 1.2s;
 }
 
 .fade-enter, .fade-leave-to {
@@ -14,13 +12,13 @@
 }
 
 .fade-transform-leave-active {
-    @include transition-v2(opacity 1s .2s ease-in, transform 1s .2s ease-in);
+    transition: opacity 1s .2s ease-in, transform 1s .2s ease-in;
 }
 .fade-transform-delay-leave-active {
-    @include transition-v2(opacity 1s .7s, transform 1s .7s);
+    transition: opacity 1s .7s, transform 1s .7s;
 }
 
 .fade-transform-leave-to, .fade-transform-delay-leave-to {
     opacity: 0;
-    @include translate(0, -30px);
+    transform: (0, -30px);
 }
