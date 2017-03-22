@@ -5,7 +5,7 @@
                 span.startOver(v-show="activeQuestion != 'servicesQuestion'" v-on:click="next('servicesQuestion')") Begynne på nytt?
             transition(name="fade" v-on:after-enter="welcomeScreen = false" v-on:after-leave="widgetContentActive = true")
                 .welcome-screen(v-if="welcomeScreen")
-                    span Hallo
+                    span Hei
             transition(name="fade" v-on:after-enter="activeQuestion = 'servicesQuestion'")
                 .calculator-widget-content(v-if="widgetContentActive") 
                         .question
@@ -135,7 +135,7 @@
                                 .summary-row(v-if="activeQuestion === 'finish'" key="price" data-index="7")
                                     span.text Total pris:
                                     span.value {{totalPrice}},- <div class="mva"> ekskl. mva</div>
-                                p.nb(v-if="activeQuestion === 'finish'" key="nb" data-index="8") NB! Denne prisen er bare en prisantydning. Send en en forespørsel til oss for å få en nøyaktig pris.
+                                p.nb(v-if="activeQuestion === 'finish'" key="nb" data-index="8") NB! Denne prisen er bare en prisantydning. Send en forespørsel til oss for å få en nøyaktig pris.
                                 .button.send.small.last(v-on:click="next('contact')" v-if="activeQuestion === 'finish'" key="button" data-index="9") Send til oss
 
                         .question.contact
@@ -151,4 +151,4 @@
                                 .textInput-container(v-if="activeQuestion === 'contact'" key="input3" data-index="4")
                                     textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
 
-                                .button.last Send
+                                .button.last(v-if="activeQuestion === 'contact'" key="button" data-index="5") Send
