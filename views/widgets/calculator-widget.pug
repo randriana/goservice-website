@@ -105,41 +105,50 @@
                                     input#checkboxSalting(type="checkbox" v-model="winter.salting").customCheckbox
                                     label(for="checkboxSalting") 
                                     span Salting
-                                .button.small(v-on:click="ifSalt('kgSaltQuestion')" v-if="activeQuestion === 'winterQuestion'" key="videre" data-index="4") Videre
+                                .button.small.last(v-on:click="ifSalt('kgSaltQuestion')" v-if="activeQuestion === 'winterQuestion'" key="videre" data-index="4") Videre
                     
-                        .question.summary(v-if="activeQuestion === 'finish'" key="finish")
-                            .summary-header
-                                h3 Oppsummering
-                            .firstCol
-                                span.main Type tjeneste:
-                                span.sous(v-if="extra") - Tillegg:
-                                br
-                                span.main(v-if="serviceType != 'Tilleggstjenester'") Antall kvadratmeter:
-                                span.main(v-if="numberOfWinterHours") Antall timer:
-                                span.main(v-if="numberOfKgSalt") Mengde salt:
-                                br
-                                span.main Total pris:
-                            .secondCol
-                                span.value {{serviceType}}
-                                span.value {{extra}}
-                                br
-                                .kvm-container(v-if="serviceType != 'Tilleggstjenester'")
-                                    input.edit-Input(v-if="editKvmText == 'Ferdig'" type="number" v-model="numberOfKvm" required autofocus)
-                                    span.value(v-else) {{numberOfKvm}} m&#178;
-                                    span.edit(v-on:click="editKvmText = editKvmText == 'Endre' ? 'Ferdig' : 'Endre'") {{editKvmText}}
-                                span.value(v-if="numberOfWinterHours") {{numberOfWinterHours}} timer
-                                span.value(v-if="numberOfKgSalt") {{numberOfKgSalt}} kg
-                                br
-                                span.value.price {{totalPrice}},- <div class="mva"> ekskl. mva</div>
-                            p.nb NB! Denne prisen er bare en prisantydning. Send en en forespørsel til oss for å få en nøyaktig pris.
-                            .send.button.small(v-on:click="next('contact')") Send til oss
 
-                        .question.contact(v-if="activeQuestion === 'contact'" key="contact")
-                            h3 Prisforespørsel
-                            .textInput-container
-                                input(type="text" placeholder="Navn/Bedrift" v-model="contact.name" autofocus required).textInput
-                            .textInput-container
-                                input(type="mail" placeholder="E-post" v-model="contact.email" required).textInput
-                            .textInput-container
-                                textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
-                            .button() Send
+                        .question.summary
+                            transition-group(v-on:after-leave="activeQuestion = nextQuestion" v-on:before-enter="groupBeforeEnter" v-on:enter="groupEnter" v-on:leave="groupLeave" v-bind:css="false")
+                                .summary-header(v-if="activeQuestion === 'finish'" key="finish" data-index="1")
+                                    h3 Oppsummering
+                                .summary-row(v-if="activeQuestion === 'finish'" key="service" data-index="2")
+                                    span.text Type tjeneste:
+                                    span.value {{serviceType}}
+                                .summary-row(v-if="extra && activeQuestion === 'finish'" key="extra" data-index="3")
+                                    span.sous - Tillegg:
+                                    span.value {{extra}}
+                                br(key="br1")
+                                .summary-row(v-if="activeQuestion === 'finish' && serviceType != 'Tilleggstjenester'" key="kvm" data-index="4")
+                                    span.text Antall kvadratmeter:
+                                    .kvm-container
+                                        input.edit-Input(v-if="editKvmText == 'Ferdig'" type="number" v-model="numberOfKvm" min="0" required autofocus)
+                                        span.value(v-else) {{numberOfKvm}} m&#178;
+                                        span.edit(v-on:click="editKvmText = editKvmText == 'Endre' ? 'Ferdig' : 'Endre'") {{editKvmText}}
+                                .summary-row(v-if="activeQuestion === 'finish' && numberOfWinterHours" key="hours" data-index="5")
+                                    span.text Antall timer:
+                                    span.value {{numberOfWinterHours}} timer
+                                .summary-row(v-if="activeQuestion === 'finish' && numberOfKgSalt" key="salt" data-index="6")
+                                    span.text Menge salt:
+                                    span.value {{numberOfKgSalt}} kg
+                                br(key="br2")
+                                .summary-row(v-if="activeQuestion === 'finish'" key="price" data-index="7")
+                                    span.text Total pris:
+                                    span.value {{totalPrice}},- <div class="mva"> ekskl. mva</div>
+                                p.nb(v-if="activeQuestion === 'finish'" key="nb" data-index="8") NB! Denne prisen er bare en prisantydning. Send en en forespørsel til oss for å få en nøyaktig pris.
+                                .button.send.small.last(v-on:click="next('contact')" v-if="activeQuestion === 'finish'" key="button" data-index="9") Send til oss
+
+                        .question.contact
+                            transition-group(v-on:after-leave="activeQuestion = nextQuestion" v-on:before-enter="groupBeforeEnter" v-on:enter="groupEnter" v-on:leave="groupLeave" v-bind:css="false")
+                                h3(v-if="activeQuestion === 'contact'" key="Prisforesporsel" data-index="1") Prisforespørsel
+
+                                .textInput-container(v-if="activeQuestion === 'contact'" key="input1" data-index="2")
+                                    input(type="text" placeholder="Navn/Bedrift" v-model="contact.name" autofocus required).textInput
+
+                                .textInput-container(v-if="activeQuestion === 'contact'" key="input2" data-index="3")
+                                    input(type="mail" placeholder="E-post" v-model="contact.email" required).textInput
+
+                                .textInput-container(v-if="activeQuestion === 'contact'" key="input3" data-index="4")
+                                    textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
+
+                                .button.last Send
