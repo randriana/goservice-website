@@ -1,4 +1,4 @@
-$animation-duration: 2s;
+$animation-duration: 3s;
 $widget-width: 850px;
 $button-width: $widget-width/5;
 .widget-container {
@@ -51,7 +51,7 @@ $button-width: $widget-width/5;
         z-index: 1;
     }
 
-    .widget-first-line {
+    .widget-first-line-1, .widget-first-line-2 {
         top: $first-line-top;
         left: 0;
         height: $first-line-height;
@@ -82,7 +82,7 @@ $button-width: $widget-width/5;
         #daglig-vask, #periodiske-vask, #gulvbehandling, #flyttevask, #tilleggstjenester {
             display: none;
 
-            &:target {
+            &.active-section {
                 display: block;
             }
         }
