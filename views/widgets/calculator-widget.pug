@@ -2,7 +2,7 @@
     transition(name="fade" v-on:after-enter="welcomeScreen = true")
         .calculator-widget-container(v-if="widgetActive")
             transition(name="fade" v-on:leave="resetData")
-                span.startOver(v-show="activeQuestion != 'servicesQuestion'" v-on:click="next('servicesQuestion')") Begynne på nytt?
+                span.startOver(v-show="activeQuestion != 'servicesQuestion' && widgetContentActive" v-on:click="next('servicesQuestion')") Begynne på nytt?
             transition(name="fade" v-on:after-enter="welcomeScreen = false" v-on:after-leave="widgetContentActive = true")
                 .welcome-screen(v-if="welcomeScreen")
                     span Hei

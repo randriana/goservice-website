@@ -7,7 +7,7 @@
     function runAnim() {
         var pos = $(window).scrollTop();
 
-        if(pos > 2000 && !animActive) {
+        if(pos > 1700 && !animActive) {
             $('.first-services-Button').get(0).click();
             animActive = true;          
         }

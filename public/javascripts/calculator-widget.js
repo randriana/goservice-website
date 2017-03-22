@@ -45,7 +45,6 @@ var calc = new Vue({
         groupLeave: function(el, done) {
             var index = el.dataset.index;
             var delay = index * 300;
-            console.dir(el)
             setTimeout(function() {
                 $(el).removeClass('fade-transform-enter-to fade-transform-enter-before');
                 $(el).addClass('fade-transform-leave-before').addClass('fade-transform-leave-to');
@@ -125,7 +124,6 @@ var calc = new Vue({
             this.activeQuestion = '';
         },
         resetData: function() {
-            console.log('rg')
             this.dagligVask.active = false;
             this.flytteVask.active = false;
             this.vindusvask.inside = false;

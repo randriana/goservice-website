@@ -4,15 +4,14 @@
     $('.widget-button').click(function(e) {
 
         var buttonId = e.target.dataset.id;
-        var currentLineClass = '.widget-first-line-' + buttonId;
-
+        
         e.preventDefault();
 
-        toggleActiveButton();
+        toggleActiveButton(this);
 
         toggleSection(e.target.hash);
 
-        moveLine();
+        moveLine(e.target, buttonId);
 
         runAnimation();
     });
@@ -28,16 +27,19 @@
         }, 1000);
     }
 
-    function toggleActiveButton() {
-        $('.widget-button')[activeButton].classList.remove("active");
+    function toggleActiveButton(self) {
+        var el = $('.widget-button');
 
-        activeButton = $('.widget-button').index(this);
 
-        $(this).addClass('active');
+        el[activeButton].classList.remove("active");
+
+        activeButton = $('.widget-button').index(self);
+        $(self).addClass('active');
     }
 
-    function moveLine() {
-        var newPos = e.target.offsetLeft +  e.target.offsetWidth/2;
+    function moveLine(el, buttonId) {
+        var newPos = el.offsetLeft +  el.offsetWidth/2;
+        var currentLineClass = '.widget-first-line-' + buttonId;
 
         $(currentLineClass).addClass('short').on('webkitTransitionEnd oTransitionEnd otransitionend transitionend', function(){
             $(currentLineClass).css({
