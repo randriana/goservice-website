@@ -37,9 +37,9 @@ block content
     .start-container(v-if="!widgetActive")
       transition-group(v-on:after-leave="widgetActive = true" v-on:leave="startLeave" v-bind:css="false")
         h2(v-if="startActive" key="header" data-index="1") Priskalkulator
-        p(v-if="startActive" key="text" data-index="2") Finn ut hvor mye det vil koste for deg umiddelbart. 
+        p(v-if="startActive" key="text" data-index="2") Prøv vårt nye interaktive priskalkulator. Finn ut hvor mye det vil koste for deg umiddelbart. 
           |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
-        .button(v-if="startActive" @click="startActive = false" key="button" data-index="3") Start priskalkulator
+        .button(v-if="startActive" @click="startActive = false" key="button" data-index="3").last Start priskalkulator
     include ./widgets/calculator-widget
   section#about
     img(src="images/fancy-invert-shadow.svg").fancy-section

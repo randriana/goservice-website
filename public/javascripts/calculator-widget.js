@@ -38,13 +38,9 @@ new Vue({
             }, delay);
 
             /* call done after the last is finished element */
-            if(index == 3) {
-                $(el).on("webkitTransitionEnd transitionend oTransitionEnd otransitionend", function() {
-                    done();
-                })
-            }
-            
-
+            $('.last').on("webkitTransitionEnd transitionend oTransitionEnd otransitionend", function() {
+                done();
+            })
         },
         next: function(nextQuestion) {
             this.nextQuestion = nextQuestion;
