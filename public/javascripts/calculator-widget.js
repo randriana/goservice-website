@@ -29,12 +29,12 @@ new Vue({
         hallo: function() {
             console.log('hallo');
         },
-        startLeave: function(el, done) {
+        groupLeave: function(el, done) {
             var index = el.dataset.index;
             var delay = index * 300;
             
             setTimeout(function() {
-                $(el).addClass('fade-transform-before').addClass('fade-transform');
+                $(el).addClass('fade-transform-leave-before').addClass('fade-transform-leave-to');
             }, delay);
 
             /* call done after the last is finished element */

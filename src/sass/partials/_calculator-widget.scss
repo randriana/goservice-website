@@ -303,12 +303,3 @@
         }
     }        
 }
-
-.fade-transform-before {
-    transition: opacity 1s, transform 1s;
-}
-
-.fade-transform {
-    opacity: 0;
-    transform: translateY(-30px);
-}

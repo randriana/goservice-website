@@ -35,7 +35,7 @@ block content
     img(src="images/fancy-invert-flipped.svg").fancy-section
   section#calculator-section
     .start-container(v-if="!widgetActive")
-      transition-group(v-on:after-leave="widgetActive = true" v-on:leave="startLeave" v-bind:css="false")
+      transition-group(v-on:after-leave="widgetActive = true" v-on:leave="groupLeave" v-bind:css="false")
         h2(v-if="startActive" key="header" data-index="1") Priskalkulator
         p(v-if="startActive" key="text" data-index="2") Prøv vårt nye interaktive priskalkulator. Finn ut hvor mye det vil koste for deg umiddelbart. 
           |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.

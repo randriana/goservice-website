@@ -11,16 +11,11 @@
     opacity: 1;
 }
 
-.fade-transform-enter-active {
+.fade-transform-leave-before {
     transition: opacity 1s, transform 1s;
 }
 
-.fade-transform-enter-to {
-    opacity: 1;
-    transform: (0, 0);
-}
-
-.fade-transform-enter {
+.fade-transform-leave-to {
     opacity: 0;
-    transform: translate(0, 30px);
+    transform: translateY(-30px);
 }
