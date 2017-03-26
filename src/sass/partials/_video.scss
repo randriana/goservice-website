@@ -18,10 +18,21 @@
         left: 0;
         height: 100%;
         width: 100%;
-        //background-color: #333333;
-        background-color: #3D4853;
-        opacity: 0.4;
+        background: rgba(61, 72, 83, 0.4);
+
+        &.less-opacity {
+            background: rgba(61, 72, 83, 0.1);
+        }
     }
+    .video-overlay-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+    }
+
     .nav-overlay {
         position: absolute;
         top: 0;

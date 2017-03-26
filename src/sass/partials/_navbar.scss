@@ -2,10 +2,31 @@
     top: 25px;
     background-color: transparent;
     border: none;
+    transition: top .3s;
+
+    &.affix {
+        top: 0;
+
+        .navbar-header .navbar-brand {
+            font-size: 25px;
+            margin-top: 4px;
+        }
+
+        .navbar-nav li:last-child {
+            margin-top: 10px;
+            padding: 3px 18px;
+        }
+    }
+
+    &.no-transparent {
+        background-color: rgb(61, 72, 83);
+    }
+
     .navbar-header .navbar-brand {
-        color: #409AF1;
+        color: #44a2cb;
         font-size: 30px;
         margin-left: 60px;
+        transition: font-size .3s;
     }
 
     .navbar-nav {
@@ -15,20 +36,22 @@
 
         li {
             margin-right: 45px;
+            padding: 15px 0;
 
             a {
-                padding-left: 0;
-                padding-right: 0;
+                padding: 0;
                 color: #F0F0F0;
             }
 
             &:last-child {
+                margin-top: 4px;
                 border: 2px solid #999999;
                 margin-right: 60px;
+                padding: 9px 30px;
+                transition: padding .3s;
                 
                 a {
-                    padding: 12px 30px;
-                    color: #409AF1;
+                    color: #44a2cb;
                 }
             }
         }
