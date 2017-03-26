@@ -1,9 +1,36 @@
 .navbar {
-    margin: 0;
-    background-color: #F8F8F8;
-
-    .navbar-brand {
+    top: 25px;
+    background-color: transparent;
+    border: none;
+    .navbar-header .navbar-brand {
         color: #409AF1;
         font-size: 30px;
+        margin-left: 60px;
+    }
+
+    .navbar-nav {
+        font-size: 13px;
+        font-weight: 100;
+        padding-top: 5px;
+
+        li {
+            margin-right: 45px;
+
+            a {
+                padding-left: 0;
+                padding-right: 0;
+                color: #F0F0F0;
+            }
+
+            &:last-child {
+                border: 2px solid #999999;
+                margin-right: 60px;
+                
+                a {
+                    padding: 12px 30px;
+                    color: #409AF1;
+                }
+            }
+        }
     }
 }

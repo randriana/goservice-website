@@ -2,17 +2,21 @@ extends ./layouts/layout
 block content
   header
     .video-container
-      video.video(loop muted)
-        source(src="videos/video.mp4")
+      video.video(autoplay loop muted)
+        source(src="videos/testvideo.mp4")
         |no suppor
+      .nav-overlay
       .video-overlay
+      .content
+        h1 Go’ Service AS
+        span Din rengjøringspartner i Bergen
   .post-header
     p Go’ Service AS tar seg av ditt hus rengjøring. 
       |Våre renholdstjenester i Bergen og omegn er helt fleksible. 
       |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
       |Prøv vår nye priskalkulator.
     a(href="calculator") Priskalkulator
-  .floating-image-container
+  .floating-image-container(class="rellax" data-rellax-speed="1.2")
     img(src="images/pexels1.jpg")
     .content
       h2 GO' SERVICE AS
@@ -32,7 +36,7 @@ block content
         img(src="images/renpluss.png")
       .partner-logo
         img(src="images/bergenflytte.png")
-    img(src="images/fancy-invert-flipped.svg").fancy-section
+    img(src="images/fancy-invert-flipped-shadow.svg").fancy-section
   section#calculator-section
     .start-container(v-if="!widgetActive")
       transition-group(v-on:after-leave="widgetActive = true" v-on:leave="groupLeave" v-bind:css="false")
@@ -42,7 +46,7 @@ block content
         .button(v-if="startActive" @click="startActive = false" key="button" data-index="3").last Start priskalkulator
     include ./widgets/calculator-widget
   section#about
-    img(src="images/fancy-invert.svg").fancy-section
+    img(src="images/fancy-invert-shadow.svg").fancy-section
     .content-section
       h2 Om oss
       p Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester.
@@ -55,3 +59,49 @@ block content
   section#why-us
     h2 Hvorfor velge oss?
     include ./widgets/why-us-widget
+  section#contact
+    .contact-container
+      h2 Kontakt oss
+      form.contact-content
+        .row
+          .col-sm-8
+            .row
+              .col-sm-6
+                input(type="text" name="name" placeholder="Navn" required)
+              .col-sm-6
+                input(type="number" name="phone" placeholder="Telefon")
+            .row
+              .col-sm-6
+                input(type="email" name="email" placeholder="E-post" required)
+              .col-sm-6
+                input(type="text" name="company" placeholder="Bedrift" required)
+            .row
+              .col-sm-12
+                textarea(name="message" rows="8" placeholder="Melding" required)
+          .col-sm-4
+            .contact-person-container
+              span.grey Daglig leder
+              .info
+                .icon.person
+                span Andri Andriana
+              br
+              .info
+                .icon.phone
+                span 92 09 30 33
+              .info
+                .icon.mail
+                span andri@goserviceas.no
+            .contact-person-container
+              span.grey Administrasjonsansvarlig
+              .info
+                .icon.person
+                span Fitia Andria
+              br
+              .info
+                .icon.phone
+                span 40 67 55 60
+              .info
+                .icon.mail
+                span post@goserviceas.no
+        
+        input.button(type="submit" value="Send")

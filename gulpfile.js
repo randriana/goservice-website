@@ -33,3 +33,11 @@ var bs = require('browser-sync').create();
     gulp.task('default', ['serve'],function() {
 
     })
+
+    gulp.task('copy', function() {
+
+        /* copy rellax */
+        gulp.src(['node_modules/rellax/rellax.min.js'])
+        .pipe(gulp.dest('public/vendor/rellax'));
+
+    });

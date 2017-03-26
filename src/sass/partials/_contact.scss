@@ -1,0 +1,97 @@
+.contact-container {
+    background-color: #3D4853;
+    width: 80%;
+    margin: 0 auto 100px;
+    box-shadow: 0 0 50px 0;
+
+    h2 {
+        padding-top: 100px;
+    }
+
+    .contact-content {
+        padding: 30px;
+        input, textarea {
+            display: block;
+            margin: 50px auto;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #cccccc;
+            font-size: 20px;
+            font-weight: 100;
+            color: #FFF;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::-webkit-input-placeholder{
+                color: lightgrey;
+            }
+
+            &.button {
+                margin: 50px 20px;
+                width: 200px;
+                border: 2px solid #cccccc;
+                border-radius: 5px;
+            }
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+        }
+
+        textarea {
+            width: 660px;
+        }
+
+        .contact-person-container {
+            margin: 100px 50px;
+            display: block;
+
+            .info {
+                .icon {
+                    position: relative;
+                    top: 3px;
+                    left: -5px;
+                    display: inline-block;
+                    $height: 20px;
+                    height: $height;
+                    width: 20px;
+                    color: #fff;
+
+                    &.phone {
+                        background: url('../icons/iphone-icon.svg');
+                        background-repeat: no-repeat;
+                        background-size: auto $height;
+                    }
+                    &.person {
+                        background: url('../icons/person-icon.svg');
+                        background-repeat: no-repeat;
+                        background-size: auto $height;
+                    }
+                    &.mail {
+                        background: url('../icons/mail-icon.svg');
+                        background-repeat: no-repeat;
+                        background-size: auto $height;
+                    }
+                }
+                span {
+                    display: inline-block;
+                }
+            }
+
+            
+
+            span {
+                font-size: 20px;
+                display: block;
+                color: #fff;
+
+                &.grey {
+                    color: #cccccc;
+                }
+            }
+        }
+    }   
+}
