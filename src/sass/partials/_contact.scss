@@ -1,6 +1,6 @@
 .contact-container {
     background-color: #3D4853;
-    width: 80%;
+    max-width: 1000px;
     margin: 0 auto 100px;
     box-shadow: 0 0 50px 0;
 
@@ -38,11 +38,11 @@
 
         input {
             height: 50px;
-            width: 300px;
+            width: 280px;
         }
 
         textarea {
-            width: 660px;
+            width: 605px;
         }
 
         .contact-person-container {

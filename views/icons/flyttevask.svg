@@ -89,7 +89,7 @@
        id="path12126"
        inkscape:connector-curvature="0" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#e6e6e6;stroke-width:0.81266254;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#3d4853;fill-opacity:1;stroke:#e6e6e6;stroke-width:0.81266254;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect12130"
        width="18.211355"
        height="7.9265213"
@@ -97,7 +97,7 @@
        y="322.20062" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.87541914px;line-height:4.57070541px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.81266254"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.87541914px;line-height:4.57070541px;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.81266254"
        x="19.340681"
        y="322.77426"
        id="text12134"
@@ -106,7 +106,7 @@
          id="tspan12132"
          x="19.340681"
          y="322.77426"
-         style="fill:#808080;fill-opacity:1;stroke-width:0.81266254">SOLGT</tspan></text>
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.81266254">SOLGT</tspan></text>
     <rect
        y="302.02084"
        x="-2.2445741"
@@ -126,7 +126,7 @@
        transform="matrix(3.0714806,0,0,3.0714806,-32.677141,-709.2726)">
       <path
          d="m 23.172743,340.87607 a 1.2988074,1.2988074 0 0 1 -1.298807,1.29881 1.2988074,1.2988074 0 0 1 -1.298808,-1.29881 1.2988074,1.2988074 0 0 1 1.298808,-1.29881 1.2988074,1.2988074 0 0 1 1.298807,1.29881 z m -11.305331,0 a 1.2988074,1.2988074 0 0 1 -1.298808,1.29881 1.2988074,1.2988074 0 0 1 -1.2988069,-1.29881 1.2988074,1.2988074 0 0 1 1.2988069,-1.29881 1.2988074,1.2988074 0 0 1 1.298808,1.29881 z m 9.025463,-6.70563 0.0384,2.45904 3.335928,0.0485 -1.882573,-2.50403 z M 6.5355834,330.85652 v 9.38045 h 1.9498859 c 0.1778002,-1.01966 1.0624967,-1.76417 2.0975437,-1.76517 1.035735,1.9e-4 1.921444,0.74484 2.099363,1.76517 h 7.052995 c 0.177792,-1.01961 1.062409,-1.7641 2.097405,-1.76517 1.038665,7e-5 1.926019,0.74886 2.10076,1.77272 h 2.230215 l 0.02283,-3.46757 -1.483463,-0.83272 -1.899525,-2.56589 h -2.333085 v -2.52182 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#72b9d8;stroke-width:0.5291667;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#3d4853;fill-opacity:1;stroke:#72b9d8;stroke-width:0.5291667;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="car"
          inkscape:connector-curvature="0" />
     </g>

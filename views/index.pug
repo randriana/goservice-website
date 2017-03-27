@@ -17,13 +17,9 @@ block content
       |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
       |Prøv vår nye priskalkulator.
     a(href="calculator") Priskalkulator
-  .floating-image-container(class="rellax" data-rellax-speed="1.2")
-    img(src="images/pexels1.jpg")
-    .content
-      h2 GO' SERVICE AS
-      p Et bredt utvalg av renholdstjenester og tjenestelevering i Bergen og omegn både for private kunder og bedrifter
-      a Våre tjenester
-  include ./widgets/services-widget
+  #services
+    .widget-card-container
+      include ./widgets/services-widget
   #partner-section
     h2 Noen av våre partnere
     .container-fluid
@@ -58,8 +54,8 @@ block content
     .image-section
       img(src="images/vacuum-cleaner.jpg")
   section#why-us
-    h2 Hvorfor velge oss?
-    include ./widgets/why-us-widget
+    .widget-card-container
+      include ./widgets/why-us-widget
   section#contact
     .contact-container
       h2 Kontakt oss

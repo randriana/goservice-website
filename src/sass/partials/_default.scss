@@ -1,5 +1,6 @@
 body {
     font-family: "open-sans", sans-serif;
+    background-color: #F0F0F0;
 }
 
 section {
@@ -17,73 +18,35 @@ section {
 }
 .post-header {
     background-color: #F0F0F0;
-    height: 740px;
+    height: 350px;
     text-align: center;
 
     p {
         text-align: center;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 100;
-        padding: 100px 320px;
+        padding: 80px 320px 50px;
     }
 
     a {
-        font-size: 25px;
+        font-size: 18px;
         color: #44a2cb;
-        padding: 20px;
-        border: 4px solid #C5C5C5;
-    }
-}
-
-.floating-image-container {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    transform: translateY(-135px);
-    box-shadow: 0 0 50px -5px;
-
-    img {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .content {
-        background-color: rgba(61, 72, 83, 0.9);
-        position: absolute;
-        height: 400px;
-        width: 667px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        color: #fff;
-        padding: 50px;
-
-        h2 {
-            font-size: 40px;
-            margin-bottom: 25px;
-        }
-
-        p {
-            font-size: 25px;
-            font-weight: 100;
-            margin-bottom: 50px;
-        }
-
-        a {
-            font-size: 25px;
-            color: #fff;
-            border: 3px solid #fff;
-            padding: 15px;
-        }
+        padding: 15px;
+        border: 3px solid #C5C5C5;
     }
 }
 
 #services {
+    padding: 80px 0 150px;
+}
 
+.widget-card-container {
+    display: block;
+    margin: 0 auto;
+    background-color: #3d4853;
+    max-width: 1000px;
+    padding: 20px 0 0;
+    box-shadow: 0 0 50px 0;
 }
 
 #partner-section {
