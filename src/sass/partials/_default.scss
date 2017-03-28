@@ -33,19 +33,26 @@ section {
         color: #44a2cb;
         padding: 15px;
         border: 3px solid #C5C5C5;
+        transition: color .5s, background-color .5s;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #44a2cb;
+            color: #fff;
+        }
     }
 }
 
 #services {
-    padding: 80px 0 150px;
+    padding: 80px 0 145px;
 }
 
 .widget-card-container {
     display: block;
     margin: 0 auto;
     background-color: #3d4853;
-    max-width: 1000px;
-    padding: 20px 0 0;
+    max-width: 990px;
+    padding: 30px 0 0;
     box-shadow: 0 0 50px 0;
 }
 
@@ -55,7 +62,7 @@ section {
     h2 {
         text-align: center;
         padding: 50px 0;
-        color: #FFF;
+        color: #44a2cb;
         font-weight: 100;
     }
 
@@ -139,4 +146,19 @@ section {
 
 .no-padding {
     padding: 0;
+}
+
+.gs-button {
+    font-size: 18px;
+    color: #44a2cb;
+    padding: 15px;
+    border: 3px solid #C5C5C5;
+    transition: color .5s, background-color .5s;
+
+    &:hover {
+        text-decoration: none;
+        background-color: #44a2cb;
+        color: #fff;
+        cursor: pointer;
+    }
 }

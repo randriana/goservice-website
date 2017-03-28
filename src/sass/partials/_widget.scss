@@ -5,14 +5,28 @@ $button-width: $widget-width/5;
 #services {
     h2 {
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         color: #44A2CB;
         font-weight: 100;
     }
 }
+
+#why-us {
+    .text-container {
+        &.no-media {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            p {
+                margin: 20px auto 0;
+            }
+        }
+    }
+}
 .widget-container {
     width: $widget-width;
-    height: 640px;
+    height: 585px;
     position: relative;
     margin: 0 auto;
 
@@ -27,10 +41,11 @@ $button-width: $widget-width/5;
 
         .widget-button {
             width: $button-width;
-            padding: 25px 0;
+            padding: 20px 0;
             text-align: center;
             font-size: 20px;
             color: #fff;
+            transition: background-color .3s;
 
             &:not(:last-child) {
                 border-right: 2px solid #fff;
@@ -39,14 +54,14 @@ $button-width: $widget-width/5;
             &:hover, &:focus, &.active {
                 cursor: pointer;
                 text-decoration: none;
-                background-color: lighten(#3d4853, 20%);
+                background-color: darken(#44A2CB, 20%);
             }
         }
     }
 
-    $first-line-top: 82px;
-    $first-line-height: 160px - $first-line-top;
-    $bottom-line-height: 60px;
+    $first-line-top: 70px;
+    $first-line-height: 120px - $first-line-top;
+    $bottom-line-height: 35px;
 
     $container-height-after: 340px;
     $container-width-after: $container-height-after*2 + 2px;
@@ -76,7 +91,7 @@ $button-width: $widget-width/5;
         height: 0px;
 
         position: absolute;
-        top: 330px - 1px;
+        top: 290px - 1px;
         left: $widget-width/2 - $container-width-before/2 + 1px;
         width: $container-width-before;
         border-top: 2px solid #fff;
@@ -164,6 +179,15 @@ $button-width: $widget-width/5;
                     }
                 }
             }
+
+            .media {
+                position: absolute;
+                top: 90px;
+                right: 20px;
+                img {
+                    max-width: 120px;
+                }
+            }
         }
 
         .carousel-container {
@@ -209,7 +233,7 @@ $button-width: $widget-width/5;
     }
 
     .widget-bottom-circle {
-        $diameter: 40px;
+        $diameter: 35px;
         position: absolute;
         top: $first-line-top + $first-line-height + $container-height-after + $bottom-line-height;
         left: $widget-width/2 - $diameter/2 + 1px;
@@ -221,7 +245,7 @@ $button-width: $widget-width/5;
 
     @keyframes middle-out {
         0% {
-            top: 329px;
+            top: 290px;
             height: 0px;
             width: $container-height-after;
             left: 254px;
@@ -231,7 +255,7 @@ $button-width: $widget-width/5;
 
         50% {
             transform: rotate(0);
-            top: 329px;
+            top: 290px;
             left: 254px;
             height: 0px;
             width: $container-height-after;
@@ -239,7 +263,7 @@ $button-width: $widget-width/5;
         }
 
         100% {
-            top: 160px;
+            top: 120px;
             left: 85px;
             height: $container-height-after;
             border-bottom: 2px solid #fff;
@@ -248,17 +272,17 @@ $button-width: $widget-width/5;
 
     @keyframes short-anim {
         0% {
-            top: 160px;
+            top: 120px;
         }
 
         50% {
-            top: 320px;
+            top: 280px;
             height: 0px;
             border-bottom: 2px solid #fff;
         }
 
         100% {
-            top: 160px;
+            top: 120px;
             height: $container-height-after;
             border-bottom: 2px solid #fff;
         }

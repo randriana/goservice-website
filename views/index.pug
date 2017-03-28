@@ -3,20 +3,21 @@ block content
   header
     .video-container
       video.video(autoplay loop muted)
-        source(src="videos/testvideo.mp4")
+        source(src="videos/gs-video-test.mp4")
         |no suppor
       .nav-overlay
       .video-overlay
       .video-overlay-gradient
-      //.content
-        h1 Go’ Service AS
-        span Din rengjøringspartner i Bergen
+      .content
+        //h1 GO SERVICE AS
+        span Et bredt utvalg av renholdstjenester og tjenestelevering i Bergen og omegn både for private kunder og bedrifter
+        .gs-button Les mer
   .post-header
     p Go’ Service AS tar seg av ditt hus rengjøring. 
       |Våre renholdstjenester i Bergen og omegn er helt fleksible. 
       |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
       |Prøv vår nye priskalkulator.
-    a(href="calculator") Priskalkulator
+    a(href="#calculator-section") Priskalkulator
   #services
     .widget-card-container
       include ./widgets/services-widget
