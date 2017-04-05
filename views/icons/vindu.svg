@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2758103"
-     inkscape:cx="352.29801"
-     inkscape:cy="220.22599"
+     inkscape:zoom="2.0507654"
+     inkscape:cx="312.58558"
+     inkscape:cy="209.14291"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,7 +62,7 @@
      id="layer1"
      transform="translate(17.160202,-245.65337)">
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#e6e6e6;stroke-width:1.53136027;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.53136027;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="vindu"
        width="64.121811"
        height="91.212601"

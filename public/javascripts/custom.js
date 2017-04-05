@@ -17,7 +17,7 @@ $(window).scroll(function() {
         $('.video-overlay').addClass('less-opacity');
 
         $('.video-overlay-gradient').css({
-            'background':'linear-gradient(rgba(61, 72, 83,' + opacity + ') 20%, rgba(61, 72, 83, ' + (opacity + 0.3) + ') 100%)',
+            'background':'linear-gradient(rgba(255, 255, 255,' + opacity + ') 20%, rgba(255, 255, 255, ' + (opacity + 0.3) + ') 100%)',
             'visibility': 'visible'
         });
     } else {

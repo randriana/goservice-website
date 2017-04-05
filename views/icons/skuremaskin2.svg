@@ -50,9 +50,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.92988813"
-     inkscape:cx="-298.43271"
-     inkscape:cy="229.40509"
+     inkscape:zoom="1.2013248"
+     inkscape:cx="-215.86963"
+     inkscape:cy="22.609482"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -77,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,13 +96,13 @@
        ry="4.1757841"
        rx="4.4046402" />
     <path
-       style="fill:none;stroke:#e6e6e6;stroke-width:1.80066514;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#c5c5c5;stroke-width:1.80066514;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 38.9351,268.94627 -22.946705,49.78797 -1.304186,-0.85191 0.346586,-9.78696 H -0.98253308 v 5.15872 l -7.49693842,4.66316 c -2.7700795,2.0107 -4.1065485,4.62137 -4.7577725,7.65361 h 4.73e-4 l 0.05761,8.43616 30.862243,0.1076 v -11.26755 l 23.36398,-50.80901 6.624432,-0.005 0.141736,-3.00058 z"
        id="skuremaskin"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccccccc" />
     <ellipse
-       style="opacity:1;fill:#3d4853;fill-opacity:1;stroke:#e6e6e6;stroke-width:1.81210029;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#eef1f1;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.81210029;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="skuremaskin-wheel"
        cx="22.570192"
        cy="324.26294"
@@ -112,6 +112,6 @@
        inkscape:connector-curvature="0"
        id="line1"
        d="m 11.128428,336.56329 v 4.413"
-       style="fill:#ffffff;stroke:url(#radialGradient15242);stroke-width:10.58333397;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
+       style="fill:#ffffff;fill-opacity:1;stroke:url(#radialGradient15242);stroke-width:10.58333397;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>
