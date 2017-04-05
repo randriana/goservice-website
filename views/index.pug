@@ -18,7 +18,19 @@ block content
       |Våre renholdstjenester i Bergen og omegn er helt fleksible. 
       |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
       |Prøv vår nye priskalkulator.
-    a(href="#calculator-section") Priskalkulator
+    //a(href="#calculator-section") Priskalkulator
+    .icon-bar
+      .row
+        .col-sm-4.icon-container
+          img(src="icons/fornoyd.svg")
+          span Fornøyd garanti
+        .col-sm-4.icon-container
+          img(src="icons/tilgjengelig.svg")
+          span 100% tilgjengelighet
+        .col-sm-4.icon-container
+          img(src="icons/godkjent.svg")
+          span Offentlig godkjent
+
   #services
     include ./widgets/services-widget
   #partner-section
