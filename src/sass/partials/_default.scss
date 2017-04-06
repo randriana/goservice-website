@@ -50,7 +50,7 @@ section {
         margin-top: 50px;
 
         img {
-            width: 100px;
+            width: 80px;
         }
 
         span {
@@ -64,7 +64,22 @@ section {
 }
 
 #services {
-    padding: 80px 0 145px;
+    border-bottom: 2px solid #c5c5c5;
+    margin: 0 145px;
+    h2 {
+        text-align: center;
+        color: darken(#C5C5C5, 40%);
+        font-weight: 100;
+        font-size: 36px;
+    }
+
+    .services-text {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 100;
+        padding: 30px 225px 90px;
+        color: darken(#C5C5C5, 30%);
+    }
 }
 
 .widget-card-container {
@@ -135,32 +150,38 @@ section {
 #why-us {
     padding: 100px 0;
 }
-.content-section {
-    padding: 50px 20px;
 
+#fornoyd-garanti {
+    margin: 50px 145px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #c5c5c5;
+    
+    img {
+        width: 40%;
+        position: relative;
+        left: 50%;
+        margin-top: 100px;
+        transform: translateX(-50%);
+    }
+}
+.content-section {
+    margin-left: 100px;
     h2 {
+        font-size: 36px;
         text-align: center;
         font-weight: 100;
-        color: #44a2cb;
+        color: #5f5f5f;
     }
 
     p {
-        margin: 30px 0;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 100;
-        color: #fff;
+        color: #797979;
+        text-align: center;
     }
 
-    span {
+    .much-text {
         font-size: 20px;
-        font-weight: 100;
-        color: #fff;
-    }
-
-    li {
-        font-size: 20px;
-        font-weight: 100;
-        color: #fff;
     }
 }
 
@@ -181,4 +202,8 @@ section {
         color: #fff;
         cursor: pointer;
     }
+}
+.hr {
+    border-color: #c5c5c5;
+    border-width: 2px;
 }

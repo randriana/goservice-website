@@ -41,7 +41,7 @@
 
             a {
                 padding: 0;
-                color: lighten(#000, 25%);
+                color: #5f5f5f;
                 transition: color .3s;
 
                 &:hover, &:focus {
@@ -51,7 +51,7 @@
 
             &:last-child {
                 margin-top: 4px;
-                border: 2px solid lighten(#000, 25%);;
+                border: 2px solid #5f5f5f;
                 margin-right: 60px;
                 padding: 9px 25px;
                 transition: padding .3s, background-color .3s;

@@ -2,16 +2,6 @@ $animation-duration: 3s;
 $widget-width: 850px;
 $button-width: $widget-width/5;
 
-#services {
-    h2 {
-        text-align: center;
-        margin-bottom: 60px;
-        color: #44A2CB;
-        font-weight: 100;
-        font-size: 36px;
-    }
-}
-
 #why-us {
     .text-container {
         &.no-media {

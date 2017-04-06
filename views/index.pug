@@ -17,7 +17,6 @@ block content
     p Go’ Service AS tar seg av ditt hus rengjøring. 
       |Våre renholdstjenester i Bergen og omegn er helt fleksible. 
       |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
-      |Prøv vår nye priskalkulator.
     //a(href="#calculator-section") Priskalkulator
     .icon-bar
       .row
@@ -26,27 +25,27 @@ block content
           span Fornøyd garanti
         .col-sm-4.icon-container
           img(src="icons/tilgjengelig.svg")
-          span 100% tilgjengelighet
+          span 100% Tilgjengelighet
         .col-sm-4.icon-container
           img(src="icons/godkjent.svg")
           span Offentlig godkjent
 
   #services
+    h2 Våre tjenester
+    p.services-text Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester. Klikk på de forskjellige tjenestene for å finne ut mer.
     include ./widgets/services-widget
-  #partner-section
-    h2 Noen av våre partnere
-    .container-fluid
-      .partner-logo
-        img(src="images/abs.png")
-      .partner-logo
-        img(src="images/Bergen-Renhold.png")
-      .partner-logo
-        img(src="images/care.png")
-      .partner-logo
-        img(src="images/renpluss.png")
-      .partner-logo
-        img(src="images/bergenflytte.png")
-    img(src="images/fancy-invert-flipped-shadow.svg").fancy-section
+
+  section#fornoyd-garanti
+    .row
+      .col-sm-8
+        .content-section
+          h2 Fornøyd garanti
+          p.much-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam erat, feugiat nec sapien in, maximus fermentum nulla. 
+            |Duis enim leo, mollis in sem ac, molestie commodo eros. Duis sed ultrices quam. Donec vestibulum, nulla id ultricies vehicula, 
+            |mauris tellus finibus enim, eget cursus ex libero sed dolor. Mauris aliquet sem nibh, vitae suscipit metus congue ultrices. 
+      .col-sm-4
+        img(src="images/garanti.png")
+
   section#calculator-section
     .start-container(v-if="!widgetActive")
       transition-group(v-on:after-leave="widgetActive = true" v-on:leave="groupLeave" v-bind:css="false")
@@ -55,7 +54,7 @@ block content
           |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
         .button(v-if="startActive" @click="startActive = false" key="button" data-index="3").last Start priskalkulator
     include ./widgets/calculator-widget
-  section#about
+  //section#about
     img(src="images/fancy-invert-shadow.svg").fancy-section
     .content-section
       h2 Om oss
@@ -66,10 +65,10 @@ block content
           li= val
     .image-section
       img(src="images/vacuum-cleaner.jpg")
-  section#why-us
+  //section#why-us
     .widget-card-container
       include ./widgets/why-us-widget
-  section#contact
+  //section#contact
     .contact-container
       h2 Kontakt oss
       form.contact-content
