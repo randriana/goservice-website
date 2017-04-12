@@ -1,6 +1,6 @@
 body {
     font-family: "open-sans", sans-serif;
-    background-color: #F0F0F0;
+    background-color: $gs-background-white;
 }
 
 section {
@@ -12,27 +12,31 @@ section {
         font-weight: 100;
     }
 }
-
-.prefixtestt {
-    transform: translate(50%, 50%);
-}
 .post-header {
-    background-color: #F0F0F0;
-    height: 350px;
+    margin: 145px;
     text-align: center;
+    padding-bottom: 100px;
+    border-bottom: 2px solid #c5c5c5;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 100;
+        color: darken(#C5C5C5, 40%);
+    }
 
     p {
         text-align: center;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 100;
-        padding: 80px 320px 50px;
+        padding: 30px 220px 50px;
+        color: darken(#C5C5C5, 30%);
     }
 
     a {
         font-size: 18px;
-        color: #44a2cb;
+        color: #404040;
         padding: 15px;
-        border: 3px solid #C5C5C5;
+        border: 3px solid #404040;
         transition: color .5s, background-color .5s;
 
         &:hover {
@@ -41,10 +45,41 @@ section {
             color: #fff;
         }
     }
+
+    .icon-bar {
+        margin-top: 50px;
+
+        img {
+            width: 80px;
+        }
+
+        span {
+            display: block;
+            color: #797979;
+            font-size: 23px;
+            font-weight: 100;
+            margin-top: 20px;
+        }
+    }
 }
 
 #services {
-    padding: 80px 0 145px;
+    border-bottom: 2px solid #c5c5c5;
+    margin: 0 145px;
+    h2 {
+        text-align: center;
+        color: darken(#C5C5C5, 40%);
+        font-weight: 100;
+        font-size: 36px;
+    }
+
+    .services-text {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 100;
+        padding: 30px 225px 90px;
+        color: darken(#C5C5C5, 30%);
+    }
 }
 
 .widget-card-container {
@@ -115,32 +150,38 @@ section {
 #why-us {
     padding: 100px 0;
 }
-.content-section {
-    padding: 50px 20px;
 
+#fornoyd-garanti {
+    margin: 50px 145px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #c5c5c5;
+    
+    img {
+        width: 40%;
+        position: relative;
+        left: 50%;
+        margin-top: 100px;
+        transform: translateX(-50%);
+    }
+}
+.content-section {
+    margin-left: 100px;
     h2 {
+        font-size: 36px;
         text-align: center;
         font-weight: 100;
-        color: #44a2cb;
+        color: #5f5f5f;
     }
 
     p {
-        margin: 30px 0;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 100;
-        color: #fff;
+        color: #797979;
+        text-align: center;
     }
 
-    span {
+    .much-text {
         font-size: 20px;
-        font-weight: 100;
-        color: #fff;
-    }
-
-    li {
-        font-size: 20px;
-        font-weight: 100;
-        color: #fff;
     }
 }
 
@@ -161,4 +202,8 @@ section {
         color: #fff;
         cursor: pointer;
     }
+}
+.hr {
+    border-color: #c5c5c5;
+    border-width: 2px;
 }
