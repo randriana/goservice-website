@@ -14,9 +14,8 @@ block content
         .gs-button Les mer
   .post-header
     h2 Hvem er vi
-    p Go’ Service AS tar seg av ditt hus rengjøring. 
+    p Go’ Service AS er et bergensbasert firma som tar seg av alt innen renhold. Vi har et profesjonelt og dyktig renholdsteam som tar jobben sin på alvor. 
       |Våre renholdstjenester i Bergen og omegn er helt fleksible. 
-      |Du kan velge å ha huset ditt eller kontoret ditt rengjort av oss så ofte du vil. 
     //a(href="#calculator-section") Priskalkulator
     .icon-bar
       .row
@@ -32,8 +31,20 @@ block content
 
   #services
     h2 Våre tjenester
-    p.services-text Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester. Klikk på de forskjellige tjenestene for å finne ut mer.
+    p.services-text Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av tjenester. Vi utfører de fleste oppdrag innen renhold.
     include ./widgets/services-widget
+
+  section#about
+    .container
+      .row
+        .col-sm-6
+          .content-section
+            h2 Om oss
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam erat, feugiat nec sapien in, maximus fermentum nulla. 
+              |Duis enim leo, mollis in sem ac, molestie commodo eros. Duis sed ultrices quam. Donec vestibulum, nulla id ultricies vehicula, 
+              |mauris tellus finibus enim, eget cursus ex libero sed dolor. Mauris aliquet sem nibh, vitae suscipit metus congue ultrices. 
+        .col-sm-6
+          img(src="images/vacuum-cleaner.jpg")
 
   section#fornoyd-garanti
     .row
@@ -54,6 +65,7 @@ block content
           |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
         .button(v-if="startActive" @click="startActive = false" key="button" data-index="3").last Start priskalkulator
     include ./widgets/calculator-widget
+  
   //section#about
     img(src="images/fancy-invert-shadow.svg").fancy-section
     .content-section
@@ -68,7 +80,7 @@ block content
   //section#why-us
     .widget-card-container
       include ./widgets/why-us-widget
-  //section#contact
+  section#contact
     .contact-container
       h2 Kontakt oss
       form.contact-content
@@ -100,17 +112,4 @@ block content
               .info
                 .icon.mail
                 span andri@goserviceas.no
-            .contact-person-container
-              span.grey Administrasjonsansvarlig
-              .info
-                .icon.person
-                span Fitia Andria
-              br
-              .info
-                .icon.phone
-                span 40 67 55 60
-              .info
-                .icon.mail
-                span post@goserviceas.no
-        
         input.button(type="submit" value="Send")

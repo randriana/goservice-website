@@ -69,7 +69,7 @@ $button-width: $widget-width/5;
         height: $first-line-height;
 
         @extend .widget-line;
-        transform: translateX($widget-width/2);
+        transform: translateX($button-width/2);
         transition: height $animation-duration/2;
 
         &.short {
@@ -78,20 +78,19 @@ $button-width: $widget-width/5;
     }
 
     .widget-content-container {
-        $container-width-before: $container-height-after;
-        height: 0px;
+        height: $container-height-after;
         z-index: 5;
         background-color: #EEF1F1;
 
         position: absolute;
-        top: 290px - 1px;
-        left: $widget-width/2 - $container-width-before/2 + 1px;
-        width: $container-width-before;
+        top: $first-line-top + $first-line-height;
+        left: 85px;
+        width: $container-width-after;
         border-top: 2px solid #C5C5C5;
-        border-bottom: 0px solid #C5C5C5;
+        border-bottom: 2px solid #C5C5C5;
         overflow: hidden;
 
-        transform: rotate(90deg);
+        transform: rotate(0deg);
 
         #daglig-vask, #periodiske-vask, #gulvbehandling, #flyttevask, #tilleggstjenester,
         #forretningsfilosofi, #tilgjengelighet, #fornoyd-garanti, #offentlig-godkjent, #referanser {
@@ -100,20 +99,6 @@ $button-width: $widget-width/5;
             &.active-section {
                 display: block;
             }
-        }
-
-        &.middle-out {
-            top: $first-line-top + $first-line-height;
-            left: 85px;
-            height: $container-height-after;
-            width: $container-width-after;
-            border-bottom: 2px solid #C5C5C5;
-
-            transform: rotate(0deg);
-        }
-
-        &.middle-out-anim {
-            animation: middle-out $animation-duration;
         }
 
         &.short-anim {
@@ -196,7 +181,7 @@ $button-width: $widget-width/5;
 
             .button {
                 position: absolute;
-                top: 20px;
+                top: 0px;
                 font-size: 20px;
                 font-weight: 100;
                 color: #c5c5c5;
@@ -213,52 +198,6 @@ $button-width: $widget-width/5;
                     cursor: pointer;
                 }
             }
-        }
-    }
-
-    .widget-bottom-line {
-        top: 280px;
-        left: $widget-width/2;
-        height: 215px;
-
-        @extend .widget-line;
-    }
-
-    .widget-bottom-circle {
-        $diameter: 35px;
-        position: absolute;
-        top: $first-line-top + $first-line-height + $container-height-after + $bottom-line-height;
-        left: $widget-width/2 - $diameter/2 + 1px;
-        width: $diameter;
-        height: $diameter;
-        border: 2px solid #C5C5C5;
-        border-radius: 100%;
-    }
-
-    @keyframes middle-out {
-        0% {
-            top: 290px;
-            height: 0px;
-            width: $container-height-after;
-            left: 254px;
-            border-bottom: 0px solid #C5C5C5;
-            transform: rotate(90deg);
-        }
-
-        50% {
-            transform: rotate(0);
-            top: 290px;
-            left: 254px;
-            height: 0px;
-            width: $container-height-after;
-            border-bottom: 2px solid #C5C5C5;
-        }
-
-        100% {
-            top: 120px;
-            left: 85px;
-            height: $container-height-after;
-            border-bottom: 2px solid #C5C5C5;
         }
     }
 

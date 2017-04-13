@@ -54,19 +54,10 @@
     }
 
     function runAnimation() {
-        if($('.widget-container').hasClass("active") === false){
-            /* add middle-out-anim for in the beginning */
-            $('.widget-content-container').addClass('middle-out middle-out-anim').on('animationend animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(){
-                $('.widget-content-container').removeClass('middle-out-anim')
-            });
-
-            $('.widget-container').addClass('active');
-        } else {
-            $('.widget-content-container').addClass('short-anim')
-            .on('animationend animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(){
-                $('.widget-content-container').removeClass('short-anim')
-            })
-        }
+        $('.widget-content-container').addClass('short-anim')
+        .on('animationend animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(){
+            $('.widget-content-container').removeClass('short-anim')
+        })   
     }
 
 

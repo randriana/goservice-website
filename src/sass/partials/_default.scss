@@ -8,8 +8,9 @@ section {
         text-align: center;
         padding: 20px 0 50px;
         margin: 0;
-        color: #44a2cb;
+        color: #5f5f5f;
         font-weight: 100;
+        font-size: 36px;
     }
 }
 .post-header {
@@ -64,7 +65,6 @@ section {
 }
 
 #services {
-    border-bottom: 2px solid #c5c5c5;
     margin: 0 145px;
     h2 {
         text-align: center;
@@ -123,26 +123,23 @@ section {
 }
 
 #about {
-    background-color: #3d4853;
-    position: relative;
-    height: 750px;
+    padding: 150px 0;
+    background-color: #fff;
 
-    .content-section {
-        width: 65%;
+    img {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        height: 500px;
+        box-shadow: 0px 0px 25px 0px;
     }
+    .content-section {
+        p {
+            text-align: left;
+        }
 
-    .image-section {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        height: 100%;
-        width: 35%;
-        
-
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+        h2 {
+            padding-top: 0;
         }
     }
 }
@@ -154,7 +151,6 @@ section {
 #fornoyd-garanti {
     margin: 50px 145px;
     padding-bottom: 50px;
-    border-bottom: 2px solid #c5c5c5;
     
     img {
         width: 40%;
