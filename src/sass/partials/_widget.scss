@@ -73,13 +73,12 @@ $button-width: 110px;
 
     .widget-content-container {
         height: auto;
-        z-index: 5;
         background-color: #EEF1F1;
 
         position: absolute;
         top: 200px;
         left: 50%;
-        width: 90vw;
+        width: 100vw;
         border-top: 2px solid #C5C5C5;
         border-bottom: 2px solid #C5C5C5;
         overflow: hidden;
@@ -93,10 +92,6 @@ $button-width: 110px;
             &.active-section {
                 display: block;
             }
-        }
-
-        &.short-anim {
-            //animation: short-anim $animation-duration;
         }
 
         .widget-content {
