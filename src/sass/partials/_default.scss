@@ -14,10 +14,11 @@ section {
     }
 }
 .post-header {
-    margin: 145px;
+    margin: 145px auto;
     text-align: center;
     padding-bottom: 100px;
     border-bottom: 2px solid #c5c5c5;
+    max-width: 1100px;
 
     h2 {
         font-size: 36px;
@@ -29,7 +30,10 @@ section {
         text-align: center;
         font-size: 25px;
         font-weight: 100;
-        padding: 30px 220px 50px;
+        //padding: 30px 20% 50px;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 30px 0 50px;
         color: darken(#C5C5C5, 30%);
     }
 
@@ -65,7 +69,7 @@ section {
 }
 
 #services {
-    margin: 0 145px;
+    margin: 0 auto;
     h2 {
         text-align: center;
         color: darken(#C5C5C5, 40%);
@@ -77,7 +81,9 @@ section {
         text-align: center;
         font-size: 25px;
         font-weight: 100;
-        padding: 30px 225px 90px;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 30px 0 90px;
         color: darken(#C5C5C5, 30%);
     }
 }

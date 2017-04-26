@@ -1,3 +1,10 @@
 $gs-light-grey: #fff;
 $gs-background-white: #EEF1F1;
 $gs-black: #141926;
+
+$first-line-top: 70px;
+$first-line-height: 120px - $first-line-top;
+$bottom-line-height: 35px;
+
+$container-height-after: 340px;
+$container-width-after: $container-height-after*2;

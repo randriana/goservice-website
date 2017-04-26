@@ -1,0 +1,63 @@
+@media (min-width: $screen-sm-min) {
+    $widget-width: 90vw;
+    $button-width: $widget-width/5;
+
+    .widget-container {
+        .button-container {
+            flex-wrap: nowrap;
+            .widget-button {
+                font-size: 15px;
+                width: $button-width;
+
+
+                &:not(:last-child) {
+                    border-right: 2px solid #C5C5C5;
+                }
+            }
+        }
+        .widget-content-container {
+            margin-top: 0;
+            top: $first-line-top + $first-line-height;
+        }
+    }
+}
+
+
+
+@media (min-width: 850px) {
+$widget-width: 850px;
+$button-width: $widget-width/5;
+
+    .widget-container {
+        width: $widget-width;
+
+        .button-container {
+            border: 2px solid #C5C5C5;
+            .widget-button {
+                width: $widget-width/5;
+                font-size: 20px;
+                border: none;
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+        .widget-first-line-1, .widget-first-line-2 {
+            display: block;
+            transform: translateX($button-width/2);
+        }
+    }
+}
+
+
+/* breakpoints for when flex button wraps */
+@media (min-width: 374px) { 
+    .widget-container .widget-content-container {
+        top: 140px;
+    }
+}
+
+@media (min-width: 623px) { 
+    .widget-container .widget-content-container {
+        top: 100px;
+    }
+}
