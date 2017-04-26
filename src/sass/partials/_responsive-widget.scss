@@ -1,3 +1,25 @@
+@media (min-width: $container-width-after) {
+    .widget-container {
+        .widget-content-container {
+            width: $container-width-after;
+            height: $container-height-after;
+
+            .widget-content {
+                .icon {
+                    display: block;
+                }
+                .text-container {
+                    height: $container-height-after;
+                    width: $container-width-after;
+                    p {
+                        margin-right: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: $screen-sm-min) {
     $widget-width: 90vw;
     $button-width: $widget-width/5;
@@ -8,7 +30,6 @@
             .widget-button {
                 font-size: 15px;
                 width: $button-width;
-
 
                 &:not(:last-child) {
                     border-right: 2px solid #C5C5C5;

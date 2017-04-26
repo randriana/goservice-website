@@ -12,19 +12,16 @@
         toggleSection(e.target.hash);
 
         moveLine(e.target, buttonId);
-
-        runAnimation();
     });
 
     function toggleSection(id) {
         var el = $('.active-section');
 
-        setTimeout(function() {
-            if(el.length > 0) {
-                el[0].classList.remove("active-section");
-            }
-            $(id).addClass('active-section');
-        }, 1000);
+        if(el.length > 0) {
+            el[0].classList.remove("active-section");
+        }
+
+        $(id).addClass('active-section');
     }
 
     function toggleActiveButton(self) {
@@ -41,26 +38,14 @@
         var newPos = el.offsetLeft +  el.offsetWidth/2;
         var currentLineClass = '.widget-first-line-' + buttonId;
 
-        $(currentLineClass).addClass('short').on('webkitTransitionEnd oTransitionEnd otransitionend transitionend', function(){
-            $(currentLineClass).css({
-                '-webkit-transform': 'translateX(' + newPos + 'px)',
-                '-moz-transform': 'translateX(' + newPos + 'px)',
-                '-ms-transform': 'translateX(' + newPos + 'px)',
-                '-o-transform': 'translateX(' + newPos + 'px)',
-                'transform': 'translateX(' + newPos + 'px)'
-            });
-            $(currentLineClass).removeClass('short');
-        })
+        $(currentLineClass).css({
+            '-webkit-transform': 'translateX(' + newPos + 'px)',
+            '-moz-transform': 'translateX(' + newPos + 'px)',
+            '-ms-transform': 'translateX(' + newPos + 'px)',
+            '-o-transform': 'translateX(' + newPos + 'px)',
+            'transform': 'translateX(' + newPos + 'px)'
+        });
     }
-
-    function runAnimation() {
-        $('.widget-content-container').addClass('short-anim')
-        .on('animationend animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(){
-            $('.widget-content-container').removeClass('short-anim')
-        })   
-    }
-
-
 
 
     /* carousel */
