@@ -41,6 +41,12 @@
             top: $first-line-top + $first-line-height;
         }
     }
+
+    .video-container .content { 
+        span {
+            font-size: 35px;
+        }
+    }
 }
 
 
