@@ -66,22 +66,8 @@ block content
           |Velg mellom alle våre tjenester og legg til informasjon om arbeidsomfanget, så vil du få en veiledende pris.
         .button(v-if="startActive" @click="startActive = false" key="button" data-index="3").last Start priskalkulator
     include ./widgets/calculator-widget
-  
-  //section#about
-    img(src="images/fancy-invert-shadow.svg").fancy-section
-    .content-section
-      h2 Om oss
-      p Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester.
-      span I Go’ Service AS vil vi ALLTID prioritere og forbedre oss i:
-      ul
-        each val in ['Nøyaktighet', 'Hjelpsomhet', 'Tilfredstille kunde', 'Stå på vilje', 'Høflighet', 'Ærlighet']
-          li= val
-    .image-section
-      img(src="images/vacuum-cleaner.jpg")
-  //section#why-us
-    .widget-card-container
-      include ./widgets/why-us-widget
-  //section#contact
+
+  section#contact
     .contact-container
       h2 Kontakt oss
       form.contact-content
@@ -100,6 +86,7 @@ block content
             .row
               .col-sm-12
                 textarea(name="message" rows="8" placeholder="Melding" required)
+            input.button(type="submit" value="Send")
           .col-sm-4
             .contact-person-container
               span.grey Daglig leder
@@ -113,4 +100,12 @@ block content
               .info
                 .icon.mail
                 span andri@goserviceas.no
-        input.button(type="submit" value="Send")
+            .contact-person-container
+              .info
+                span Lilletveitvegen 89 A,
+                span 5228 Nesttun
+              br
+              .info
+                span post@goserviceas.no
+              .info
+                span Org nr. 913 515 749
