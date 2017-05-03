@@ -1,0 +1,17 @@
+@media (min-width: $screen-sm-min) {
+    .navbar {
+        .navbar-header .navbar-brand {
+            font-size: 30px;
+        }
+        &.affix .navbar-header .navbar-brand {
+            font-size: 25px;
+        }
+    }
+
+    #about {
+        img {
+            height: 500px;
+        }
+    }
+
+}

@@ -47,17 +47,18 @@ block content
           img(src="images/vacuum-cleaner.jpg")
 
   section#fornoyd-garanti
-    .row
-      .col-sm-8
-        .content-section
-          h2 Fornøyd garanti
-          p.much-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam erat, feugiat nec sapien in, maximus fermentum nulla. 
-            |Duis enim leo, mollis in sem ac, molestie commodo eros. Duis sed ultrices quam. Donec vestibulum, nulla id ultricies vehicula, 
-            |mauris tellus finibus enim, eget cursus ex libero sed dolor. Mauris aliquet sem nibh, vitae suscipit metus congue ultrices. 
-      .col-sm-4
-        img(src="images/garanti.png")
+    .container
+      .row
+        .col-sm-8
+          .content-section
+            h2 Fornøyd garanti
+            p.much-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam erat, feugiat nec sapien in, maximus fermentum nulla. 
+              |Duis enim leo, mollis in sem ac, molestie commodo eros. Duis sed ultrices quam. Donec vestibulum, nulla id ultricies vehicula, 
+              |mauris tellus finibus enim, eget cursus ex libero sed dolor. Mauris aliquet sem nibh, vitae suscipit metus congue ultrices. 
+        .col-sm-4
+          img(src="images/garanti.png")
 
-  //section#calculator-section
+  section#calculator-section
     .start-container(v-if="!widgetActive")
       transition-group(v-on:after-leave="widgetActive = true" v-on:leave="groupLeave" v-bind:css="false")
         h2(v-if="startActive" key="header" data-index="1") Priskalkulator

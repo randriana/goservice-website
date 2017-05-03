@@ -135,7 +135,7 @@ section {
         position: relative;
         display: block;
         margin: 50px auto 0;
-        height: 500px;
+        height: 400px;
         box-shadow: 0px 0px 25px 0px;
     }
     .content-section {
@@ -154,14 +154,14 @@ section {
 }
 
 #fornoyd-garanti {
-    margin: 50px 145px;
+    margin: 50px 0;
     padding-bottom: 50px;
     
     img {
-        width: 40%;
+        width: 180px;
         position: relative;
         left: 50%;
-        margin-top: 100px;
+        margin-top: 50px;
         transform: translateX(-50%);
     }
 }
@@ -206,4 +206,10 @@ section {
 .hr {
     border-color: #c5c5c5;
     border-width: 2px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
