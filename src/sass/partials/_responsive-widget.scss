@@ -1,4 +1,17 @@
+/* 680px */
 @media (min-width: $container-width-after) {
+
+    .post-header {
+        p {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .icon-bar .icon-container span {
+            font-size: 19px;
+        }
+    }
+
     .widget-container {
         .widget-content-container {
             width: $container-width-after;
@@ -23,6 +36,10 @@
 @media (min-width: $screen-sm-min) {
     $widget-width: 90vw;
     $button-width: $widget-width/5;
+
+    .post-header .icon-bar .icon-container span {
+        font-size: 23px;
+    }
 
     .widget-container {
         .button-container {
@@ -51,7 +68,7 @@
 
 
 
-@media (min-width: 850px) {
+@media (min-width: 870px) {
 $widget-width: 850px;
 $button-width: $widget-width/5;
 

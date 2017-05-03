@@ -27,8 +27,8 @@ section {
     }
 
     p {
-        text-align: center;
-        font-size: 25px;
+        text-align: justify;
+        font-size: 20px;
         font-weight: 100;
         max-width: 650px;
         margin: 0 auto;
@@ -52,19 +52,14 @@ section {
 
     .icon-bar {
         margin-top: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
         .icon-container {
-            margin: 0 50px;
             img {
                 width: 80px;
             }
             span {
                 display: block;
                 color: #797979;
-                font-size: 23px;
+                font-size: 15px;
                 font-weight: 100;
                 margin-top: 20px;
             }
@@ -133,19 +128,19 @@ section {
 }
 
 #about {
-    padding: 150px 0;
+    padding: 100px 0;
     background-color: #fff;
 
     img {
         position: relative;
         display: block;
-        margin: 0 auto;
+        margin: 50px auto 0;
         height: 500px;
         box-shadow: 0px 0px 25px 0px;
     }
     .content-section {
         p {
-            text-align: left;
+            text-align: center;
         }
 
         h2 {
@@ -171,7 +166,6 @@ section {
     }
 }
 .content-section {
-    margin-left: 100px;
     h2 {
         font-size: 36px;
         text-align: center;
