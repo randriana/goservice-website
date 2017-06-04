@@ -14,7 +14,7 @@ section {
     }
 }
 .post-header {
-    margin: 145px auto;
+    margin: 145px auto 0;
     text-align: center;
     padding-bottom: 100px;
     border-bottom: 2px solid #c5c5c5;
@@ -27,7 +27,7 @@ section {
     }
 
     p {
-        text-align: justify;
+        text-align: center;
         font-size: 20px;
         font-weight: 100;
         max-width: 650px;
@@ -54,7 +54,7 @@ section {
         margin-top: 50px;
         .icon-container {
             img {
-                width: 80px;
+                width: 50px;
             }
             span {
                 display: block;
@@ -69,6 +69,7 @@ section {
 
 #services {
     margin: 0 auto;
+    padding-top: 100px;
     h2 {
         text-align: center;
         color: darken(#C5C5C5, 40%);
@@ -145,6 +146,21 @@ section {
 
         h2 {
             padding-top: 0;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 50px;
+        li {
+            font-size: 25px;
+            margin-top: 10px;
+            color: #797979;
+            font-weight: 100;
+
+            .blue {
+                color: #44a2cb;
+            }
         }
     }
 }

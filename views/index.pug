@@ -9,9 +9,10 @@ block content
       .video-overlay
       .video-overlay-gradient
       .content
-        //h1 GO SERVICE AS
-        span Et bredt utvalg av renholdstjenester og tjenestelevering i Bergen og omegn både for private kunder og bedrifter
-        .gs-button Les mer
+        .reveal
+          //h1 GO SERVICE AS
+          span Et bredt utvalg av renholdstjenester og tjenestelevering i Bergen og omegn både for private kunder og bedrifter
+          div(href="#services").gs-button.scroll-on-click Les mer
   .post-header.container-fluid
     h2 Hvem er vi
     p Go’ Service AS er et bergensbasert firma som tar seg av alt innen renhold. Vi har et profesjonelt og dyktig renholdsteam som tar jobben sin på alvor. 
@@ -40,11 +41,18 @@ block content
         .col-sm-6
           .content-section
             h2 Om oss
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam erat, feugiat nec sapien in, maximus fermentum nulla. 
-              |Duis enim leo, mollis in sem ac, molestie commodo eros. Duis sed ultrices quam. Donec vestibulum, nulla id ultricies vehicula, 
-              |mauris tellus finibus enim, eget cursus ex libero sed dolor. Mauris aliquet sem nibh, vitae suscipit metus congue ultrices. 
+            p Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av renholdtjenester. 
+              |I Go’ Service AS vil vi alltid prioritere og forbedre oss i: 
+            ul 
+              li.reveal-list <span class="blue">&#10003;</span> Nøyaktighet
+              li.reveal-list <span class="blue">&#10003;</span> Hjelpsomhet
+              li.reveal-list <span class="blue">&#10003;</span> Effektivitet 
+              li.reveal-list <span class="blue">&#10003;</span> Tilfredstille kunde 
+              li.reveal-list <span class="blue">&#10003;</span> Stå på vilje 
+              li.reveal-list <span class="blue">&#10003;</span> Høflighet 
+              li.reveal-list <span class="blue">&#10003;</span> Ærlighet 
         .col-sm-6
-          img(src="images/vacuum-cleaner.jpg")
+          img.reveal-img(src="images/vacuum-cleaner.jpg")
 
   section#fornoyd-garanti
     .container
@@ -52,9 +60,11 @@ block content
         .col-sm-8
           .content-section
             h2 Fornøyd garanti
-            p.much-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam erat, feugiat nec sapien in, maximus fermentum nulla. 
-              |Duis enim leo, mollis in sem ac, molestie commodo eros. Duis sed ultrices quam. Donec vestibulum, nulla id ultricies vehicula, 
-              |mauris tellus finibus enim, eget cursus ex libero sed dolor. Mauris aliquet sem nibh, vitae suscipit metus congue ultrices. 
+            p.much-text Go’ Service er glade for å tilby sine kunder fornøyd garanti. Denne garantien gjelder for alle individuelle tjenester. 
+              |Når som helst i løpet av første 24t etter utført oppdrag har du rett til å reklamere, dersom du ikke er fornøyd med resultatet. 
+              |Vår prioritet er at våre tjenester tilfredsstiller vår kunde. Derfor er kommunikasjon med kunden svær viktig for oss. 
+              |Så vi garanterer kvalitet og eksepsjonell service når som helst. Go’ Service er tilgjengelig til å svare på alle dine spørsmål 
+              |om bestillingen av oppdrag, fornøyd garanti ordning og våre tjenester. 
         .col-sm-4
           img(src="images/garanti.png")
 
@@ -74,18 +84,18 @@ block content
         .row
           .col-sm-8
             .row
-              .col-sm-6
+              .col-sm-6.reveal-input
                 input(type="text" name="name" placeholder="Navn" required)
-              .col-sm-6
+              .col-sm-6.reveal-input
                 input(type="number" name="phone" placeholder="Telefon")
             .row
-              .col-sm-6
+              .col-sm-6.reveal-input
                 input(type="email" name="email" placeholder="E-post" required)
-              .col-sm-6
+              .col-sm-6.reveal-input
                 input(type="text" name="company" placeholder="Bedrift" required)
             .row
-              .col-sm-12
-                textarea(name="message" rows="8" placeholder="Melding" required)
+              .col-sm-12.reveal-input
+                textarea(name="message" rows="5" placeholder="Melding" required)
             input.button(type="submit" value="Send")
           .col-sm-4
             .contact-person-container

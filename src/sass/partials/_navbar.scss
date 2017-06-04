@@ -8,8 +8,14 @@
         top: 0;
 
         .navbar-header .navbar-brand {
-            font-size: 20px;
             margin-top: 4px;
+
+            .brand-img-grey {
+                display: block;
+            }
+            .brand-img-white {
+                display: none;
+            }
         }
 
         .navbar-nav li:last-child {
@@ -28,6 +34,15 @@
         font-size: 20px;
         margin-left: 60px;
         transition: font-size .3s;
+        padding: 0;
+
+        .brand-img-white, .brand-img-grey {
+            width: 200px;
+        }
+
+        .brand-img-grey {
+            display: none;
+        }
     }
 
     .navbar-nav {

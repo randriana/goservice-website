@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="244.55885"
+   height="115.34596"
+   viewBox="0 0 64.706195 30.51862"
+   version="1.1"
+   id="svg1966"
+   inkscape:version="0.92.0 r"
+   sodipodi:docname="broyting.svg">
+  <defs
+     id="defs1960">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7806"
+       effect="spiro" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6442172"
+     inkscape:cx="248.54928"
+     inkscape:cy="-3.8727658"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1035"
+     inkscape:window-x="1440"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:snap-nodes="false" />
+  <metadata
+     id="metadata1963">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(16.942681,-311.27157)">
+    <path
+       style="fill:#c5c5c5;fill-opacity:1;stroke-width:0.99999994"
+       d="m 15.475572,311.27157 c -2.753006,0 -4.313594,0.1299 -5.000709,0.417 -1.0474399,0.43766 -3.5827171,3.262 -4.7272066,5.26633 -0.3693123,0.64679 -0.8915275,1.17734 -1.1604166,1.17844 -1.0538665,0.005 -5.8896627,1.56226 -7.9175072,2.54986 -1.8741709,0.91278 -2.2248825,1.21692 -2.8323843,2.45534 -0.4963064,1.01175 -0.660391,1.75085 -0.7552275,3.84368 h -1.8211 c -1.5556618,-3.59241 -4.9258578,-6.06566 -7.7976388,-5.72555 -0.568833,0.0685 -0.530148,0.66261 0.05403,0.66067 4.713805,1.05338 5.704322,3.79638 6.7486496,7.90626 1.0443269,4.10987 -1.3596026,9.29105 -3.7356176,10.41899 -0.764237,0.3628 0.0377,0.67981 0.0377,0.67981 2.577423,-0.96341 5.0968802,-4.71708 5.4993168,-8.73577 h 0.9752675 c 0.021183,0.67252 0.049088,1.28056 0.090042,1.66297 l 0.2059712,1.92466 1.3855217,-0.0894 c 1.3833843,-0.0898 1.3854848,-0.0922 1.6055616,-1.38947 0.8379889,-4.93993 6.4291459,-7.62254 10.9811874,-5.26858 1.917274,0.99146 3.8836228,4.77103 3.8836228,6.78129 l 12.209138,-0.0642 0.203157,-1.11933 c 0.265331,-1.45966 1.371493,-3.63816 2.256116,-4.44301 2.048238,-1.86353 5.655345,-2.55205 8.034561,-1.53409 2.317848,0.99169 4.156671,3.26064 4.612966,5.69291 0.241586,1.28775 0.439295,1.32121 4.644481,0.78561 3.393508,-0.43222 4.415098,-0.78021 4.608461,-1.56898 l -0.0095,-13.18271 -2.041141,-0.0118 v -8.88717 h -21.2044 v 8.76673 l -4.016437,-0.0231 -0.09736,-3.98154 c -0.06907,-2.81523 -0.217411,-4.12517 -0.507048,-4.4734 -0.343346,-0.41284 -1.057375,-0.49242 -4.412059,-0.49242 z m -0.849772,3.13346 c 1.204173,0 2.26215,0.073 2.351221,0.16207 0.08907,0.0891 0.255342,1.28401 0.369738,2.65569 0.185397,2.22307 0.148161,2.53774 -0.343287,2.89709 l -7.8983732,0.085 v -0.82669 c 0,-0.9309 1.2933022,-3.10103 2.5189262,-4.22691 0.712193,-0.6542 1.081956,-0.74622 3.001775,-0.74622 z m -10.9074654,15.1175 a 6.1337521,6.1337521 0 0 0 -6.1341128,6.1341 6.1337521,6.1337521 0 0 0 6.1341128,6.13356 6.1337521,6.1337521 0 0 0 6.1335507,-6.13356 6.1337521,6.1337521 0 0 0 -6.1335507,-6.1341 z m 27.1988794,0 a 6.1337521,6.1337521 0 0 0 -6.133549,6.1341 6.1337521,6.1337521 0 0 0 6.133549,6.13356 6.1337521,6.1337521 0 0 0 6.133551,-6.13356 6.1337521,6.1337521 0 0 0 -6.133551,-6.1341 z"
+       id="broytebil"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

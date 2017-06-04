@@ -1,9 +1,4 @@
 (function() {
-
-/* rellax instance */
-var rellax = new Rellax('.rellax');
-
-
 /* navbar-anim */
 $(window).scroll(function() {
     var scrollPos = $(this).scrollTop();
@@ -31,6 +26,29 @@ $(window).scroll(function() {
         $('nav').removeClass('no-transparent');
     }
 })
+
+/* autoscroll when click on anchor-tags */
+$(document).on('click', '.scroll-on-click', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+
+/* scrollreveal */
+window.sr = ScrollReveal({ viewOffset: { top: 60 }, duration: 1500 });
+sr.reveal('.reveal', { delay: 1000, duration: 2000});
+sr.reveal('.icon-container', { viewFactor: 0.8 },100);
+sr.reveal('.reveal-list', { viewFactor: 1 }, 100);
+sr.reveal('.reveal-input', { viewFactor: 1 }, 100);
+sr.reveal('.reveal-img', { 
+    scale: 1, 
+    distance: '100px', 
+    duration: 2000,
+    easing: 'ease',
+    viewFactor: 0.5
+ });
 
 
 

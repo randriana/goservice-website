@@ -8,6 +8,22 @@
         }
     }
 
+    .post-header {
+        p {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .icon-bar .icon-container {
+            span {
+                font-size: 19px;
+            }
+            img {
+                width: 80px;
+            }
+        }
+    }
+
     #about {
         img {
             height: 500px;

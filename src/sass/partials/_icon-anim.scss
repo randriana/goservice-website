@@ -274,42 +274,13 @@
   }
 }
 
+#broytebil {
+  animation: broytebil-anim 0.5s infinite;
+}
 
-
-
-
-
-  /*0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translate(3px, 5.5px);
-  }
-  40% {
-    transform: translate(-3px, -1px);
-  }
+@keyframes broytebil-anim {
   50% {
-    transform: translate(-10px, -7.5px);
+    transform: translateY(0.2px) rotate(0.1deg);
   }
-  60% {
-    transform: translate(3px, -14px);
-  }
-  70% {
-    transform: translate(2px, -20.5px);
-  }
-  80% {
-    transform: translate(2px, -27px);
-  }
-  90% {
-    transform: translate(1px, -33.5px);
-  }
-  100% {
-    transform: translateY(60px);
-  }
-}*/
+}
+

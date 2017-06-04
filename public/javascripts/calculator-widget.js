@@ -21,7 +21,7 @@ var calc = new Vue({
         byggvask: { active: false, silicon: false, maling: false, pricePerKvm: 19, priceSilicon: 10, priceMaling: 10 },
         nedvask: { active: false, pricePerKvm: 43 },
         tepperens: { active: false, pricePerKvm: 25 },
-        gulvbehandling: { boning: false, skuring: false, priceBoning: 25, priceSkuring: 20 },
+        gulvbehandling: { boning: false, skuring: false, priceBoning: 20, priceSkuring: 20 },
         winter: { broyting: false, salting: false, broytingPerHour: 500, saltingPerHour: 250, saltPerKg: 2 },
         contact: { name: '', email: '', message: ''},
     },

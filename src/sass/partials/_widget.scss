@@ -105,8 +105,9 @@ $button-width: 110px;
             }
 
             .text-container {
-                height: auto;
+                height: 310px;
                 width: auto;
+                overflow: scroll;
                 p {
                     padding: 10px 30px;
                     margin: 0;
@@ -117,9 +118,7 @@ $button-width: 110px;
                     text-align: justify;
 
                     &.much-text {
-                        padding: 0 20px;
-                        font-size: 15px;
-                        line-height: 28px;
+                        line-height: 30px;
                     }
 
                     &.very-much-text {
