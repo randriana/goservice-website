@@ -35,7 +35,7 @@ block content
     p.services-text Go’ Service AS er en seriøs aktør innen tjenestelevering. Per idag består dette hovedsakelig innen et bredt utvalg av tjenester. Vi utfører de fleste oppdrag innen renhold.
     include ./widgets/services-widget
 
-  section#about
+  //section#about
     .container
       .row
         .col-sm-6
@@ -54,7 +54,7 @@ block content
         .col-sm-6
           img.reveal-img(src="images/vacuum-cleaner.jpg")
 
-  section#fornoyd-garanti
+  //section#fornoyd-garanti
     .container
       .row
         .col-sm-8
@@ -68,7 +68,7 @@ block content
         .col-sm-4
           img(src="images/garanti.png")
 
-  section#calculator-section
+  //section#calculator-section
     .start-container(v-if="!widgetActive")
       transition-group(v-on:after-leave="widgetActive = true" v-on:leave="groupLeave" v-bind:css="false")
         h2(v-if="startActive" key="header" data-index="1") Priskalkulator
@@ -77,7 +77,7 @@ block content
         .button(v-if="startActive" @click="startActive = false" key="button" data-index="3").last Start priskalkulator
     include ./widgets/calculator-widget
 
-  section#contact
+  //section#contact
     .contact-container
       h2 Kontakt oss
       form.contact-content(method="POST" action="http://formspree.io/post@goserviceas.no")
