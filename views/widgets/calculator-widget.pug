@@ -30,7 +30,7 @@ transition(name="fade" v-on:after-enter="welcomeScreen = true")
                         form(v-on:submit.prevent="finish" key="form").textInput-container
                             transition-group(v-on:after-leave="activeQuestion = nextQuestion" v-on:before-enter="groupBeforeEnter" v-on:enter="groupEnter" v-on:leave="groupLeave" v-bind:css="false")
                                 h3(v-if="activeQuestion === 'kvmQuestion'" key="kvmQuestion" data-index="1") Hvor mange kvadratmeter gjelder det?
-                                input(type="number" v-model="numberOfKvm" min="1" v-if="activeQuestion === 'kvmQuestion'" key="textinput" data-index="2" autofocus required).textInput
+                                input(type="number" v-model="numberOfKvm" min="1" v-if="activeQuestion === 'kvmQuestion'" key="textinput" data-index="2" required).textInput
                                 span(v-if="activeQuestion === 'kvmQuestion'" key="enhet" data-index="2").enhet m&#178;
                                 input.button.last(type="submit" value="Videre" v-if="activeQuestion === 'kvmQuestion'" key="submit" data-index="3") 
                         
@@ -38,7 +38,7 @@ transition(name="fade" v-on:after-enter="welcomeScreen = true")
                         form(v-on:submit.prevent="next('winterHoursQuestion')").textInput-container
                             transition-group(v-on:after-leave="activeQuestion = nextQuestion" v-on:before-enter="groupBeforeEnter" v-on:enter="groupEnter" v-on:leave="groupLeave" v-bind:css="false")
                                 h3(v-if="activeQuestion === 'kgSaltQuestion'" key="kgSaltQuestion" data-index="1") Hvor mange kilo salt trengs det?
-                                input(type="number" v-model="numberOfKgSalt" v-if="activeQuestion === 'kgSaltQuestion'" key="textinput" data-index="2" autofocus required).textInput
+                                input(type="number" v-model="numberOfKgSalt" v-if="activeQuestion === 'kgSaltQuestion'" key="textinput" data-index="2" required).textInput
                                 span(v-if="activeQuestion === 'kgSaltQuestion'" key="enhet" data-index="2").enhet kg
                                 input.button.last(type="submit" value="Videre" v-if="activeQuestion === 'kgSaltQuestion'" key="submit" data-index="3")
 
@@ -46,7 +46,7 @@ transition(name="fade" v-on:after-enter="welcomeScreen = true")
                         form(v-on:submit.prevent="finish").textInput-container
                             transition-group(v-on:after-leave="activeQuestion = nextQuestion" v-on:before-enter="groupBeforeEnter" v-on:enter="groupEnter" v-on:leave="groupLeave" v-bind:css="false")
                                 h3(v-if="activeQuestion === 'winterHoursQuestion'" key="winterHoursQuestion" data-index="1") Hvor mange timer arbeid trengs det?
-                                input(type="number" v-model="numberOfWinterHours" min="0" v-if="activeQuestion === 'winterHoursQuestion'" key="textinput" data-index="2" autofocus required).textInput
+                                input(type="number" v-model="numberOfWinterHours" min="0" v-if="activeQuestion === 'winterHoursQuestion'" key="textinput" data-index="2" required).textInput
                                 span(v-if="activeQuestion === 'winterHoursQuestion'" key="enhet" data-index="2").enhet timer
                                 input.button.last(type="submit" value="Videre" v-if="activeQuestion === 'winterHoursQuestion'" key="submit" data-index="3")
                 
@@ -121,7 +121,7 @@ transition(name="fade" v-on:after-enter="welcomeScreen = true")
                             .summary-row(v-if="activeQuestion === 'finish' && serviceType != 'Tilleggstjenester'" key="kvm" data-index="4")
                                 span.text Antall kvadratmeter:
                                 .kvm-container
-                                    input.edit-Input(v-if="editKvmText == 'Ferdig'" type="number" v-model="numberOfKvm" min="0" required autofocus)
+                                    input.edit-Input(v-if="editKvmText == 'Ferdig'" type="number" v-model="numberOfKvm" min="0" required)
                                     span.value(v-else) {{numberOfKvm}} m&#178;
                                     span.edit(v-on:click="editKvmText = editKvmText == 'Endre' ? 'Ferdig' : 'Endre'") {{editKvmText}}
                             .summary-row(v-if="activeQuestion === 'finish' && numberOfWinterHours" key="hours" data-index="5")
@@ -145,7 +145,7 @@ transition(name="fade" v-on:after-enter="welcomeScreen = true")
                             h3(v-if="activeQuestion === 'contact'" key="Prisforesporsel" data-index="1") Prisforespørsel
 
                             .textInput-container(v-if="activeQuestion === 'contact'" key="input1" data-index="2")
-                                input(type="text" name="navn/bedrift" placeholder="Navn/Bedrift" autofocus required).textInput
+                                input(type="text" name="navn/bedrift" placeholder="Navn/Bedrift" required).textInput
 
                             .textInput-container(v-if="activeQuestion === 'contact'" key="input2" data-index="3")
                                 input(type="mail" name="_replyto" placeholder="E-post" required).textInput
