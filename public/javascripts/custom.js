@@ -36,7 +36,7 @@ $(document).on('click', '.scroll-on-click', function(event){
     }, 500);
 });
 
-/* scrollreveal */
+/* scrollreveal 
 window.sr = ScrollReveal({ viewOffset: { top: 60 }, duration: 1500 });
 sr.reveal('.reveal', { delay: 1000, duration: 2000});
 sr.reveal('.icon-container', { viewFactor: 0.8 },100);
@@ -48,7 +48,7 @@ sr.reveal('.reveal-img', {
     duration: 2000,
     easing: 'ease',
     viewFactor: 0.5
- });
+ });*/
 
 
 
