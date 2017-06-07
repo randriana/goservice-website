@@ -80,7 +80,7 @@ block content
   section#contact
     .contact-container
       h2 Kontakt oss
-      form.contact-content
+      form.contact-content(method="POST" action="http://formspree.io/post@goserviceas.no")
         .row
           .col-sm-8
             .row
@@ -90,9 +90,11 @@ block content
                 input(type="number" name="phone" placeholder="Telefon")
             .row
               .col-sm-6.reveal-input
-                input(type="email" name="email" placeholder="E-post" required)
+                input(type="email" name="_replyto" placeholder="E-post" required)
               .col-sm-6.reveal-input
                 input(type="text" name="company" placeholder="Bedrift" required)
+                input(type="hidden" name="_cc" value="andri@goserviceas.no")
+                input(type="hidden" name="_format" value="plain")
             .row
               .col-sm-12.reveal-input
                 textarea(name="message" rows="5" placeholder="Melding" required)

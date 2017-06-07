@@ -131,23 +131,28 @@ transition(name="fade" v-on:after-enter="welcomeScreen = true")
                                 span.text Menge salt:
                                 span.value {{numberOfKgSalt}} kg
                             br(key="br2")
-                            .summary-row(v-if="activeQuestion === 'finish'" key="price" data-index="7")
+                            .summary-row(v-if="activeQuestion === 'finish' && serviceType == 'Daglig vask'" key="price" data-index="7")
+                                span.text Total pris:
+                                span.value.small-text Pris ikke tilgjengelig. <br> Ta kontakt for gratis befaring.
+                            .summary-row(v-else-if="activeQuestion === 'finish'" key="price" data-index="7")
                                 span.text Total pris:
                                 span.value {{totalPrice}},- <div class="mva"> ekskl. mva</div>
-                            p.nb(v-if="activeQuestion === 'finish'" key="nb" data-index="8") NB! Denne prisen er bare en prisantydning. Send en forespørsel til oss for å få en nøyaktig pris.
+                            p.nb(v-if="activeQuestion === 'finish' && serviceType != 'Daglig vask'" key="nb" data-index="8") NB! Denne prisen er bare en prisantydning. Send en forespørsel til oss for å få en nøyaktig pris.
                             .button.send.small.last(v-on:click="next('contact')" v-if="activeQuestion === 'finish'" key="button" data-index="9") Send til oss
 
-                    .question.contact
+                    form.question.contact(method="POST" action="http://formspree.io/post@goserviceas.no")
                         transition-group(v-on:after-leave="activeQuestion = nextQuestion" v-on:before-enter="groupBeforeEnter" v-on:enter="groupEnter" v-on:leave="groupLeave" v-bind:css="false")
                             h3(v-if="activeQuestion === 'contact'" key="Prisforesporsel" data-index="1") Prisforespørsel
 
                             .textInput-container(v-if="activeQuestion === 'contact'" key="input1" data-index="2")
-                                input(type="text" placeholder="Navn/Bedrift" v-model="contact.name" autofocus required).textInput
+                                input(type="text" name="navn/bedrift" placeholder="Navn/Bedrift" autofocus required).textInput
 
                             .textInput-container(v-if="activeQuestion === 'contact'" key="input2" data-index="3")
-                                input(type="mail" placeholder="E-post" v-model="contact.email" required).textInput
+                                input(type="mail" name="_replyto" placeholder="E-post" required).textInput
+                                input(type="hidden" name="_cc" value="andri@goserviceas.no")
+                                input(type="hidden" name="_format" value="plain")
 
                             .textInput-container(v-if="activeQuestion === 'contact'" key="input3" data-index="4")
-                                textarea(placeholder="Melding" v-model="contact.message" rows="5").textInput.textareainput
+                                textarea(placeholder="Melding" name="melding" rows="5").textInput.textareainput
 
-                            .button.last(v-if="activeQuestion === 'contact'" key="button" data-index="5") Send
+                            input.button.last(type="submit" value="Send" v-if="activeQuestion === 'contact'" key="button" data-index="5")
