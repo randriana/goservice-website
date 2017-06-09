@@ -229,3 +229,12 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
+footer {
+    position: relative;
+    .small-footer-text {
+        position: absolute;
+        left: 15px;
+        font-size: 12px;
+    }
+}
